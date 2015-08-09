@@ -22,6 +22,30 @@ thus the starter projects in this repo. We may at some point add remotes to
 push each branch to it's own repo where the code will live at master, but that
 will be treated purely as mirrors of this repo.
 
+#### Getting Started
+
+All starter projects share a common method for getting started. It involves
+created a virtualenv, installing Django, and running the `startproject` command
+with a url to the template, followed by a few commands within your new project.
+
+```
+pip install virtualenv
+virtualenv mysiteenv
+source mysiteenv/bin/activate
+pip install Django==1.8.3
+django-admin.py startproject --template=https://github.com/pinax/pinax-project/zipball/<PROJECT_BRANCH> mysite --extension=py,js
+cd mysite
+chmod +x manage.py
+pip install -r requirements.txt
+./manage.py migrate
+./manage.py loaddata sites
+./manage.py runserver
+```
+
+See each section below for the startproject url as well as any deviation from
+these common notes.
+
+
 #### Projects
 
 * `zero`
@@ -41,8 +65,12 @@ will be treated purely as mirrors of this repo.
 
 ##### Pinax Project Zero
 
-This is the baseline of all projects.
+This project lays the foundation for all other Pinax starter projects. It
+provides the project directory layout and bootstrap-based theme.
 
+```
+django-admin.py startproject --template=https://github.com/pinax/pinax-project/zipball/zero mysite --extension=py,js
+```
 
 ##### Pinax Project Account
 
