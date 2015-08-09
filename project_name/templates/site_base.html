@@ -1,0 +1,32 @@
+{% extends "theme_bootstrap/base.html" %}
+
+{% load staticfiles %}
+{% load i18n %}
+
+
+{# remove to bring back topbar #}
+{% block topbar_base %}{% endblock %}
+
+
+{% block styles %}
+    {% include "_styles.html" %}
+{% endblock %}
+
+
+{% block extra_head_base %}
+    {% block extra_head %}{% endblock %}
+{% endblock %}
+
+
+{% block footer %}
+    {% include "_footer.html" %}
+{% endblock %}
+
+
+{% block scripts %}
+    {% include "_scripts.html" %}
+{% endblock %}
+
+{% block extra_body_base %}
+    {% block extra_body %}{% endblock %}
+{% endblock %}
