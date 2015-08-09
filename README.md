@@ -1,2 +1,80 @@
 # pinax-project
-Pinax Starter Projects
+
+[![Join us on Slack](http://slack.pinaxproject.com/badge.svg)](http://slack.pinaxproject.com/)
+
+Pinax is a collection of Django project templates that we call starter projects
+as well as apps and themes. Many of the starter projects are derivatives of each
+other ([pinax-project-zero](http://github.com/pinax/pinax-project-zero) is a
+parent of [pinax-project-project](http://github.com/pinax/pinax-project-project)
+among many others).
+
+One of the things that has become a bit of a maintenance nightmare, especially
+as we add additional projects is keepign all these repos up to date with when
+most of the changes apply to all of them (e.g. upgrade Django version).
+
+This repo serves as an experiment as a new way of managing this.
+
+We will leverage `git` and branching to manage the hierarchy.  The `master`
+branch will remain purely for this README and perhaps other ancillary files.
+Each project template will get a new branch and will branch from it's natural
+parent. This README will be maintained with a full list of the branches and
+thus the starter projects in this repo. We may at some point add remotes to
+push each branch to it's own repo where the code will live at master, but that
+will be treated purely as mirrors of this repo.
+
+#### Projects
+
+* `zero`
+* `account`
+* `social`
+* `social-auth`
+* `blog`
+* `lms`
+* `forums`
+* `waiting-list`
+* `private-beta`
+* `wiki`
+* `teams`
+* `symposion`
+* `static`
+
+
+##### Pinax Project Zero
+
+This is the baseline of all projects.
+
+
+##### Pinax Project Account
+
+
+##### Pinax Project Social
+
+
+##### Pinax Project Social Auth
+
+
+##### Pinax Project Blog
+
+
+##### Pinax Project LMS
+
+
+##### Pinax Project Forums
+
+
+##### Pinax Project Waiting List
+
+
+##### Pinax Project Private Beta
+
+
+##### Pinax Project Wiki
+
+
+##### Pinax Project Teams
+
+
+##### Pinax Project Symposion
+
+
+##### Pinax Project Static
