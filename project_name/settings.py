@@ -93,6 +93,7 @@ TEMPLATE_CONTEXT_PROCESSORS = [
     "django.core.context_processors.request",
     "django.contrib.messages.context_processors.messages",
     "pinax_theme_bootstrap.context_processors.theme",
+    "{{ project_name }}.context_processors.settings",
 ]
 
 
@@ -116,6 +117,7 @@ TEMPLATE_DIRS = [
 ]
 
 INSTALLED_APPS = [
+    "django.contrib.admin",
     "django.contrib.auth",
     "django.contrib.contenttypes",
     "django.contrib.messages",
@@ -126,6 +128,9 @@ INSTALLED_APPS = [
     # theme
     "bootstrapform",
     "pinax_theme_bootstrap",
+
+    # external
+    "pinax.blog",
 
     # project
     "{{ project_name }}",

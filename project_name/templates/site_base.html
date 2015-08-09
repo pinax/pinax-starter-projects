@@ -14,14 +14,18 @@
 
 
 {% block extra_head_base %}
-    {% block extra_head %}{% endblock %}
+    {% block extra_head %}
+        {{ block.super }}
+        {% comment %}
+        <meta name="twitter:site" content="@pinaxproject">
+        {% endcomment %}
+        <meta property="og:site_name" content="{{ SITE_NAME }}">
+        <link rel="alternate" type="application/atom+xml" href="{% url 'blog_feed' 'all' 'atom' %}" title="Atom Feed for Blog">
+    {% endblock %}
 {% endblock %}
 
 
-{% block footer %}
-    {% include "_footer.html" %}
-{% endblock %}
-
+{% block footer_base %}{% endblock %}
 
 {% block scripts %}
     {% include "_scripts.html" %}
