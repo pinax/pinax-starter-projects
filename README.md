@@ -51,6 +51,7 @@ these common notes.
 * `zero`
  * `account`
  * `blog`
+ * `static`
 * `social`
 * `social-auth`
 * `lms`
@@ -60,7 +61,6 @@ these common notes.
 * `wiki`
 * `teams`
 * `symposion`
-* `static`
 
 
 ##### Pinax Project Zero
@@ -91,11 +91,18 @@ This project gets you off and running with a blog.
 django-admin.py startproject --template=https://github.com/pinax/pinax-project/zipball/blog mysite --extension=py,js
 ```
 
+##### Pinax Project Static
+
+This purpose of this starter project is to provide a robust mocking and design tool.
+
+```
+django-admin.py startproject --template=https://github.com/pinax/pinax-project/zipball/static mysite --extension=py,js
+```
+
 ##### Pinax Project Social
 
 
 ##### Pinax Project Social Auth
-
 
 
 ##### Pinax Project LMS
@@ -117,6 +124,3 @@ django-admin.py startproject --template=https://github.com/pinax/pinax-project/z
 
 
 ##### Pinax Project Symposion
-
-
-##### Pinax Project Static
