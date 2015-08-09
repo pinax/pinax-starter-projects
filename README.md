@@ -49,10 +49,10 @@ these common notes.
 #### Projects
 
 * `zero`
-* `account`
+ * `account`
+ * `blog`
 * `social`
 * `social-auth`
-* `blog`
 * `lms`
 * `forums`
 * `waiting-list`
@@ -83,13 +83,19 @@ user accounts.
 django-admin.py startproject --template=https://github.com/pinax/pinax-project/zipball/account mysite --extension=py,js
 ```
 
+##### Pinax Project Blog
+
+This project gets you off and running with a blog.
+
+```
+django-admin.py startproject --template=https://github.com/pinax/pinax-project/zipball/blog mysite --extension=py,js
+```
+
 ##### Pinax Project Social
 
 
 ##### Pinax Project Social Auth
 
-
-##### Pinax Project Blog
 
 
 ##### Pinax Project LMS
