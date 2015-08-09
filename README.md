@@ -49,17 +49,17 @@ these common notes.
 #### Projects
 
 * `zero`
- * `account`
- * `blog`
- * `static`
+  * `account`
+    * `wiki`
+      * `team-wiki`
+  * `blog`
+  * `static`
 * `social`
 * `social-auth`
 * `lms`
 * `forums`
 * `waiting-list`
 * `private-beta`
-* `wiki`
-* `teams`
 * `symposion`
 
 
@@ -119,8 +119,19 @@ django-admin.py startproject --template=https://github.com/pinax/pinax-project/z
 
 ##### Pinax Project Wiki
 
+a demo starter project that provides a wiki for authenticated users
 
-##### Pinax Project Teams
+```
+django-admin.py startproject --template=https://github.com/pinax/pinax-project/zipball/wiki mysite --extension=py,js
+```
 
+
+##### Pinax Project Team Wiki
+
+a starter project that has account management with profiles and teams and basic collaborative content.
+
+```
+django-admin.py startproject --template=https://github.com/pinax/pinax-project/zipball/team-wiki mysite --extension=py,js
+```
 
 ##### Pinax Project Symposion
