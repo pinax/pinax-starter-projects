@@ -33,7 +33,7 @@ pip install virtualenv
 virtualenv mysiteenv
 source mysiteenv/bin/activate
 pip install Django==1.8.3
-django-admin.py startproject --template=https://github.com/pinax/pinax-project/zipball/<PROJECT_BRANCH> mysite --extension=py,js
+django-admin.py startproject --template=https://github.com/pinax/pinax-project/zipball/<PROJECT_BRANCH> mysite --extension=py -n static/webpack.config.js
 cd mysite
 chmod +x manage.py
 pip install -r requirements.txt
@@ -48,12 +48,12 @@ these common notes.
 
 #### Projects
 
-* `zero`
-  * `account`
-    * `wiki`
-      * `team-wiki`
-  * `blog`
-  * `static`
+* [zero](https://github.com/pinax/pinax-projects/tree/zero)
+  * [account](https://github.com/pinax/pinax-projects/tree/account)
+    * [wiki](https://github.com/pinax/pinax-projects/tree/wiki)
+      * [team-wiki](https://github.com/pinax/pinax-projects/tree/team-wiki)
+  * [blog](https://github.com/pinax/pinax-projects/tree/blog)
+  * [static](https://github.com/pinax/pinax-projects/tree/static)
 * `social`
 * `social-auth`
 * `lms`
@@ -69,7 +69,7 @@ This project lays the foundation for all other Pinax starter projects. It
 provides the project directory layout and bootstrap-based theme.
 
 ```
-django-admin.py startproject --template=https://github.com/pinax/pinax-project/zipball/zero mysite --extension=py,js
+django-admin.py startproject --template=https://github.com/pinax/pinax-project/zipball/zero mysite --extension=py -n static/webpack.config.js
 ```
 
 ##### Pinax Project Account
@@ -80,7 +80,7 @@ management functionality. It is a foundation suitable for most sites that have
 user accounts.
 
 ```
-django-admin.py startproject --template=https://github.com/pinax/pinax-project/zipball/account mysite --extension=py,js
+django-admin.py startproject --template=https://github.com/pinax/pinax-project/zipball/account mysite --extension=py -n static/webpack.config.js
 ```
 
 ##### Pinax Project Blog
@@ -88,7 +88,7 @@ django-admin.py startproject --template=https://github.com/pinax/pinax-project/z
 This project gets you off and running with a blog.
 
 ```
-django-admin.py startproject --template=https://github.com/pinax/pinax-project/zipball/blog mysite --extension=py,js
+django-admin.py startproject --template=https://github.com/pinax/pinax-project/zipball/blog mysite --extension=py -n static/webpack.config.js
 ```
 
 ##### Pinax Project Static
@@ -96,7 +96,7 @@ django-admin.py startproject --template=https://github.com/pinax/pinax-project/z
 This purpose of this starter project is to provide a robust mocking and design tool.
 
 ```
-django-admin.py startproject --template=https://github.com/pinax/pinax-project/zipball/static mysite --extension=py,js
+django-admin.py startproject --template=https://github.com/pinax/pinax-project/zipball/static mysite --extension=py -n static/webpack.config.js
 ```
 
 ##### Pinax Project Social
@@ -122,7 +122,7 @@ django-admin.py startproject --template=https://github.com/pinax/pinax-project/z
 a demo starter project that provides a wiki for authenticated users
 
 ```
-django-admin.py startproject --template=https://github.com/pinax/pinax-project/zipball/wiki mysite --extension=py,js
+django-admin.py startproject --template=https://github.com/pinax/pinax-project/zipball/wiki mysite --extension=py -n static/webpack.config.js
 ```
 
 
@@ -131,7 +131,7 @@ django-admin.py startproject --template=https://github.com/pinax/pinax-project/z
 a starter project that has account management with profiles and teams and basic collaborative content.
 
 ```
-django-admin.py startproject --template=https://github.com/pinax/pinax-project/zipball/team-wiki mysite --extension=py,js
+django-admin.py startproject --template=https://github.com/pinax/pinax-project/zipball/team-wiki mysite --extension=py -n static/webpack.config.js
 ```
 
 ##### Pinax Project Symposion
