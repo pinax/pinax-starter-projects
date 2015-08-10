@@ -133,6 +133,7 @@ INSTALLED_APPS = [
     "account",
     "metron",
     "pinax.eventlog",
+    "wiki",
 
     # project
     "{{ project_name }}",
@@ -171,6 +172,7 @@ FIXTURE_DIRS = [
     os.path.join(PROJECT_ROOT, "fixtures"),
 ]
 
+WIKI_HOOKSET = "{{ project_name }}.hooks.ProjectWikiHookset"
 EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend"
 
 ACCOUNT_OPEN_SIGNUP = True

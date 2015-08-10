@@ -1,0 +1,12 @@
+{% extends "site_base.html" %}
+
+{% block body %}
+
+    {% if can_edit %}
+        <a class="pull-right btn btn-xs btn-primary" href="{{ revision.page.get_edit_url }}">Edit</a>
+    {% endif %}
+
+    <div class="page">
+        {{ revision.content_html|safe }}
+    </div>
+{% endblock %}

@@ -2,7 +2,7 @@
 
 {% load i18n %}
 
-{% block head_title %}pinax-project-account{% endblock %}
+{% block head_title %}pinax-project-wiki{% endblock %}
 
 {% block body_class %}home{% endblock %}
 
@@ -24,6 +24,10 @@
             {% url "account_signup" as signup_url %}
             <p>{% blocktrans %}You can <a href="{{ login_url }}" class="btn btn-default">Log In</a> or <a href="{{ signup_url }}" class="btn btn-primary">Sign Up</a> to try out the site.{% endblocktrans %}</p>
             {% endif %}
+            <h2>About Wiki Project</h2>
+            <p>
+                Get started with your <a href="{% url "wiki_index" %}">wiki now</a>
+            </p>
         </div>
     </section>
     <section>
