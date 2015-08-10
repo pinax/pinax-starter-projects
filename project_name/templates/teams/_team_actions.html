@@ -1,0 +1,39 @@
+<div>
+    {% if role == "owner" or role == "manager" %}
+        <a class="btn btn-default btn-xs" href="{% url 'team_manage' team.slug %}">manage</a>
+    {% endif %}
+    {% if role == "owner" %}
+        <a class="btn btn-default btn-xs" href="{% url 'team_edit' team.slug %}">edit</a>
+    {% endif %}
+</div>
+
+
+{% if state == "invited" %}
+    <p>
+        You have been invited to join this team.
+        Click <b>join</b> below to accept.
+    </p>
+{% endif %}
+
+<div>
+    {% if can_join %}
+        <form method="post" action="{% url 'team_join' team.slug %}">
+            {% csrf_token %}
+            <input type="submit" class="btn btn-primary" value="join">
+        </form>
+    {% endif %}
+
+    {% if can_leave %}
+        <form method="post" action="{% url 'team_leave' team.slug %}">
+            {% csrf_token %}
+            <input type="submit" class="btn btn-default" value="leave">
+        </form>
+    {% endif %}
+
+    {% if can_apply %}
+        <form method="post" action="{% url 'team_apply' team.slug %}">
+            {% csrf_token %}
+            <input type="submit" class="btn btn-primary" value="apply">
+        </form>
+    {% endif %}
+</div>

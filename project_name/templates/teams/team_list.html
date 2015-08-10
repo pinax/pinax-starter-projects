@@ -1,0 +1,34 @@
+{% extends "site_base.html" %}
+
+{% block head_title %}Teams{% endblock %}
+
+{% load thumbnail %}
+
+{% block body %}
+    <div class="row">
+        <div class="col-md-12">
+
+            <h1>Teams <a class="btn btn-default" href="{% url 'team_create' %}"><i class="fa fa-plus"></i> Create Team</a></h1>
+        </div>
+    </div>
+    <div class="row">
+        {% for team in teams %}
+            <div class="col-md-3">
+                <div class="media" style="margin-bottom: 16px;">
+                    {% if team.avatar %}
+                        <img width="72" height="72" class="media-object pull-left" src="{% thumbnail team.avatar 72x72 crop %}" alt="{{ profile.name|default:user.username }}">
+                    {% else %}
+                        <div class="default-avatar media-object pull-left">
+                            <i class="fa fa-group fa-3x"></i>
+                        </div>
+                    {% endif %}
+
+                    <div class="media-body">
+                        <h4 class="media-heading"><a href="{% url 'team_detail' slug=team.slug %}">{{ team.name }}</a></h4>
+                        {{ team.get_access_display }}
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+{% endblock %}

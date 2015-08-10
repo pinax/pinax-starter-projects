@@ -1,0 +1,48 @@
+{% extends "site_base.html" %}
+
+{% block head_title %}People{% endblock %}
+
+{% load thumbnail %}
+
+{% block body %}
+    <div class="row">
+        <div class="col-md-12">
+            <h1>People</h1>
+        </div>
+    </div>
+    <div class="row">
+        {% for profile in profiles %}
+            <div class="col-md-3">
+                <div class="media" style="margin-bottom: 16px;">
+                    {% if profile.avatar %}
+                        <img width="72" height="72" class="media-object pull-left" src="{% thumbnail profile.avatar 72x72 crop %}" alt="{{ profile.name|default:user.username }}">
+                    {% else %}
+                        <div class="default-avatar media-object pull-left">
+                            <i class="fa fa-user fa-4x"></i>
+                        </div>
+                    {% endif %}
+
+                    <div class="media-body">
+                        <h4 class="media-heading"><a href="{% url 'profiles_detail' username=profile.user.username %}">{{ profile.display_name }}</a></h4>
+                    {% if profile.affiliation %}
+                        <div>
+                            <span class="dim">
+                                <i class="fa fa-institution"></i>
+                            </span>
+                            {{ profile.affiliation }}
+                        </div>
+                    {% endif %}
+                    {% if profile.location %}
+                        <div>
+                            <span class="dim">
+                                <i class="fa fa-map-marker"></i>
+                            </span>
+                            {{ profile.location }}
+                        </div>
+                    {% endif %}
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+{% endblock %}

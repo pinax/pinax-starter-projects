@@ -1,0 +1,6 @@
+{% load bootstrap %}
+<form method="post" class="ajax invite-form" data-replace=".invite-form" action="{% url "team_invite" team.slug %}">
+    {% csrf_token %}
+    {{ invite_form|bootstrap }}
+    <button class="btn btn-primary">Invite</button>
+</form>

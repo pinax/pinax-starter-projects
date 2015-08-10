@@ -5,3 +5,7 @@ metron==1.3.5
 pinax-eventlog==1.0.0
 django-jsonfield==0.9.15
 pinax-wiki==0.1.3
+Pillow==2.9.0
+easy-thumbnails==2.2
+pinax-teams==0.1.1
+django-reversion==1.9.3

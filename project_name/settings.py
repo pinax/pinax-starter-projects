@@ -133,10 +133,14 @@ INSTALLED_APPS = [
     "account",
     "metron",
     "pinax.eventlog",
+    "easy_thumbnails",
+    "kaleo",
+    "teams",
     "wiki",
 
     # project
     "{{ project_name }}",
+    "{{ project_name }}.profiles",
 ]
 
 # A sample logging configuration. The only tangible logging
@@ -173,6 +177,10 @@ FIXTURE_DIRS = [
 ]
 
 WIKI_HOOKSET = "{{ project_name }}.hooks.ProjectWikiHookset"
+WIKI_BINDERS = [
+    "{{ project_name }}.binders.UserBinder",
+    "{{ project_name }}.binders.TeamBinder"
+]
 EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend"
 
 ACCOUNT_OPEN_SIGNUP = True
@@ -185,4 +193,5 @@ ACCOUNT_USE_AUTH_AUTHENTICATE = True
 
 AUTHENTICATION_BACKENDS = [
     "account.auth_backends.UsernameAuthenticationBackend",
+    "django.contrib.auth.backends.ModelBackend"
 ]

@@ -1,0 +1,72 @@
+{% extends "site_base.html" %}
+
+{% load thumbnail %}
+{% load url from future %}
+{% load bootstrap %}
+
+{% block body_class %}{{ block.super }} profile{% endblock %}
+
+{% block head_title %}Edit Profile{% endblock %}
+
+{% block body %}
+    <div class="row">
+        <div class="col-md-9">
+            <form class="form profile-form" action="" method="POST" enctype="multipart/form-data">
+                <legend>Edit Profile</legend>
+                {% csrf_token %}
+                {{ form.name|bootstrap }}
+                <div id="div_id_avatar" class="control-group">
+                    <label for="id_avatar" class="control-label">
+                        Avatar
+                    </label>
+                    <div class="controls">
+                        {% if profile.avatar %}
+                            <img class="img-polaroid avatar hidden-phone" src="{% thumbnail profile.avatar 160x160 crop %}" alt="{{ profile.name }}" /><br />
+                        {% endif %}
+                        {% comment %}
+                        <div class="preview-window" style="margin-top:20px;width:160px;height:160px;overflow:hidden;float:left;">
+                            <img id="preview" style="max-width: none;" class="hide" src="" />
+                        </div>
+                        {% endcomment %}
+                        {% comment %}
+                        <div class="remove">
+                            <label for="avatar-clear_id">Clear Avatar</label>
+                            <input id="avatar-clear_id" name="avatar-clear" type="checkbox">
+                        </div>
+                        {% endcomment %}
+                        <span class="btn btn-success btn-avatar btn-small">
+                            <span>Select File</span>
+                            <input id="id_avatar" name="avatar" type="file">
+                        </span>
+                        <span class="selected-filename"></span>
+                    </div>
+                </div>
+                {{ form.bio|bootstrap }}
+                {{ form.affiliation|bootstrap }}
+                {{ form.location|bootstrap }}
+                {{ form.website|bootstrap }}
+                {% with field=form.twitter_username %}
+                    <div class="form-group{% if field.errors %} has-error{% endif %}">
+                        {% if field.auto_id %}
+                            <label class="control-label {{ classes.label }} {% if field.field.required %}{{ form.required_css_class }}{% endif %}" for="{{ field.auto_id }}">{{ field.label }}</label>
+                        {% endif %}
+                        <div class="input-group">
+                            <span class="input-group-addon">@</span>
+                            <input type="text" name="{{ field.name }}" value="{{ field.value }}" class="form-control" />
+                        </div>
+                        {% for error in field.errors %}
+                            <span class="help-block {{ form.error_css_class }}">{{ error }}</span>
+                        {% endfor %}
+                        {% if field.help_text %}
+                            <p class="help-block">
+                                {{ field.help_text|safe }}
+                            </p>
+                        {% endif %}
+                    </div>
+                {% endwith %}
+                <button type="submit" class="btn btn-primary">Save</button>
+                <a class="btn btn-default" href="{% url 'profiles_detail' request.user.username %}">Cancel</a>
+            </form>
+        </div>
+    </div>
+{% endblock %}

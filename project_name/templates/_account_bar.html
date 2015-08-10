@@ -4,9 +4,9 @@
 
 <ul class="nav navbar-nav pull-right">
     {% if request.user.is_authenticated %}
-        <p class="navbar-text">
-            <i class="fa fa-user"></i> {% user_display request.user %}
-        </p>
+        <li>
+            <a href="{% url 'profiles_detail' request.user.username %}"><i class="fa fa-user"></i> {% user_display request.user %}</a>
+        </li>
         <li>
             <a href="{% url 'account_settings' %}"><i class="fa fa-cog"></i> {% trans "Settings" %}</a>
         </li>

@@ -1,0 +1,54 @@
+{% extends "site_base.html" %}
+
+{% load bootstrap %}
+{% load thumbnail %}
+
+{% block body_class %}teams form{% endblock %}
+
+{% block head_title %}Create Team{% endblock %}
+
+
+{% block body %}
+    <div class="row">
+        <div class="col-md-6">
+            <form class="form profile-form" action="" method="POST" enctype="multipart/form-data">
+                {% if team.pk %}
+                    <legend>Edit Team</legend>
+                {% else %}
+                    <legend>Create Team</legend>
+                {% endif %}
+
+                {% csrf_token %}
+
+                {{ form.name|bootstrap }}
+
+                <div id="div_id_avatar" class="control-group">
+                    <label for="id_avatar" class="control-label">
+                        Avatar
+                    </label>
+                    <div class="controls">
+                        {% if profile.avatar %}
+                            <img class="img-polaroid avatar hidden-phone" src="{% thumbnail profile.avatar 160x160 crop %}" alt="{{ profile.name }}" /><br />
+                        {% endif %}
+                        <span class="btn btn-success btn-avatar btn-small">
+                            <span>Select File</span>
+                            <input id="id_avatar" name="avatar" type="file">
+                        </span>
+                        <span class="selected-filename"></span>
+                    </div>
+                </div>
+
+                {{ form.description|bootstrap }}
+                {{ form.member_access|bootstrap }}
+                {{ form.manager_access|bootstrap }}
+
+                <button type="submit" class="btn btn-primary">Save</button>
+                {% if team.pk %}
+                    <a class="btn btn-default" href="{% url 'team_detail' team.slug %}">Cancel</a>
+                {% else %}
+                    <a class="btn btn-default" href="{% url 'team_list' %}">Cancel</a>
+                {% endif %}
+            </form>
+        </div>
+    </div>
+{% endblock %}

@@ -1,0 +1,16 @@
+<div class="col-md-4">
+    <h2>Latest Wiki Updates</h2>
+    <ul>
+        {% for revision in wiki.latest_edits %}
+            <li><a href="{{ revision.page.get_absolute_url }}">{{ revision.page.slug }}</a> {{ revision.created_at }}</li>
+        {% endfor %}
+    </ul>
+</div>
+<div class="col-md-4">
+    <h2>Table of Contents</h2>
+    <ul>
+        {% for page in wiki.pages.all %}
+            <li><a href="{{ page.get_absolute_url }}">{{ page.slug }}</a></li>
+        {% endfor %}
+    </ul>
+</div>

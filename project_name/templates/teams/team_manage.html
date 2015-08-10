@@ -1,0 +1,74 @@
+{% extends "site_base.html" %}
+
+{% load staticfiles %}
+{% load bootstrap %}
+{% load thumbnail %}
+
+{% block head_title %}Manage {{ team.name }}{% endblock %}
+
+
+{% block body %}
+    <div class="row">
+        <div class="col-md-4">
+            {% if team.avatar %}
+                <img class="img-polaroid avatar hidden-phone" src="{% thumbnail team.avatar 160x160 crop %}" alt="{{ team.name }}">
+            {% else %}
+                <div class="default-avatar-big">
+                    <i class="fa fa-group fa-5x"></i>
+                </div>
+            {% endif %}
+
+            <h2>{{ team.name }}</h2>
+            {% if role %}<p><span class="label label-default">{{ role }}</span></p>{% endif %}
+
+            {% if team.description %}<p>{{ team.description }}</p>{% endif %}
+
+            <a class="btn btn-default btn-xs" href="{% url 'team_detail' team.slug %}">back to team</a>
+        </div>
+        <div class="col-md-8">
+            {% if user.is_staff or role == "manager" or role == "owner" %}
+                {% if team.owners %}
+                    <h2>Owners</h2>
+                    <table class="table table-striped owners">
+                        {% for membership in team.owners %}
+                            {% include "teams/_membership.html" %}
+                        {% endfor %}
+                    </table>
+                {% endif %}
+                {% if team.managers %}
+                    <h2>Managers</h2>
+                    <table class="table table-striped managers">
+                        {% for membership in team.managers %}
+                            {% include "teams/_membership.html" %}
+                        {% endfor %}
+                    </table>
+                {% endif %}
+                {% if team.members %}
+                    <h2>Members</h2>
+                    <table class="table table-striped members">
+                        {% for membership in team.members %}
+                            {% include "teams/_membership.html" %}
+                        {% endfor %}
+                    </table>
+                {% endif %}
+                {% if team.applicants and team.member_access == "application" %}
+                    <h2>Applicants</h2>
+                    <table class="table table-striped applicants">
+                        {% for membership in team.applicants %}
+                            {% include "teams/_membership.html" %}
+                        {% endfor %}
+                    </table>
+                {% endif %}
+                <h2>Invitees</h2>
+                <table class="table table-striped invitees">
+                    {% for membership in team.invitees %}
+                        {% include "teams/_membership.html" %}
+                    {% endfor %}
+                </table>
+                {% if invite_form %}
+                    {% include "teams/_invite_form.html" %}
+                {% endif %}
+            {% endif %}
+        </div>
+    </div>
+{% endblock %}

@@ -1,0 +1,55 @@
+{% extends "site_base.html" %}
+
+{% load bootstrap %}
+{% load thumbnail %}
+{% load wiki_tags %}
+
+{% block head_title %}{{ team.name }}{% endblock %}
+
+{% block body %}
+    <div class="row">
+        <div class="col-md-4">
+            {% if team.avatar %}
+                <img class="img-polaroid avatar hidden-phone" src="{% thumbnail team.avatar 160x160 crop %}" alt="{{ team.name }}">
+            {% else %}
+                <div class="default-avatar-big">
+                    <i class="fa fa-group fa-5x"></i>
+                </div>
+            {% endif %}
+
+            <h2>{{ team.name }}</h2>
+            {% if role %}<p><span class="label label-default">{{ role }}</span></p>{% endif %}
+
+            {% if team.description %}<p>{{ team.description }}</p>{% endif %}
+
+            {% include "teams/_team_actions.html" %}
+
+            <h4>Owners</h4>
+            {% for membership in team.owners %}
+                <a href="{% url 'profiles_detail' membership.user.username %}">{{ membership.user }}</a>
+                {% if not forloop.last %}&bull;{% endif %}
+            {% empty %}
+                <p>None.</p>
+            {% endfor %}
+
+            <h4>Managers</h4>
+            {% for membership in team.managers %}
+                <a href="{% url 'profiles_detail' membership.user.username %}">{{ membership.user }}</a>
+                {% if not forloop.last %}&bull;{% endif %}
+            {% empty %}
+                <p>None.</p>
+            {% endfor %}
+
+            <h4>Members</h4>
+            {% for membership in team.members %}
+                <a href="{% url 'profiles_detail' membership.user.username %}">{{ membership.user }}</a>
+                {% if not forloop.last %}&bull;{% endif %}
+            {% empty %}
+                <p>None.</p>
+            {% endfor %}
+
+        </div>
+        {% wiki_for team as wiki %}
+        {% include "_latest_wikis.html" %}
+    </div>
+{% endblock %}

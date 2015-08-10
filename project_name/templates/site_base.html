@@ -9,6 +9,12 @@
     {% include "_styles.html" %}
 {% endblock %}
 
+{% block nav %}
+    <ul class="nav navbar-nav pull-left">
+        <li><a href="{% url 'profiles_list' %}">People</a></li>
+        <li><a href="{% url 'team_list' %}">Teams</a></li>
+    </ul>
+{% endblock %}
 
 {% block extra_head_base %}
     {% block extra_head %}{% endblock %}

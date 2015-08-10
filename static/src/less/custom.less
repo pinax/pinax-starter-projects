@@ -35,3 +35,84 @@ p.login-signup {
 .wiki-edit textarea {
     font-family: @font-family-monospace;
 }
+
+.profile-widget {
+    .dim {
+        color: #999;
+    }
+    .profile {
+        margin: 15px 0;
+        padding: 15px 0;
+        border-top: 1px solid #DDD;
+        border-bottom: 1px solid #DDD;
+    }
+    .item {
+        padding: 2px 0;
+        font-size: 14px;
+        color: #666;
+    }
+}
+
+.default-avatar {
+    text-align: center;
+    height: 72px;
+    width: 72px;
+    color: #999;
+    background: #DDD;
+    padding-top: 8px;
+}
+
+.default-avatar-big {
+    text-align: center;
+    height: 160px;
+    width: 160px;
+    color: #999;
+    background: #DDD;
+    padding-top: 40px;
+}
+
+body.teams.form {
+    .btn-avatar {
+        position: relative;
+        overflow: hidden;
+    }
+    .btn-avatar input {
+        position: absolute;
+        top: 0;
+        right: 0;
+        margin: 0;
+        opacity: 0;
+        filter: alpha(opacity=0);
+        transform: translate(-300px, 0) scale(4);
+        font-size: 23px;
+        direction: ltr;
+        cursor: pointer;
+    }
+    .remove input {
+        float:left;
+        margin-right: 10px;
+    }
+}
+
+body.profile {
+    .btn-avatar {
+        position: relative;
+        overflow: hidden;
+    }
+    .btn-avatar input {
+        position: absolute;
+        top: 0;
+        right: 0;
+        margin: 0;
+        opacity: 0;
+        filter: alpha(opacity=0);
+        transform: translate(-300px, 0) scale(4);
+        font-size: 23px;
+        direction: ltr;
+        cursor: pointer;
+    }
+    .remove input {
+        float:left;
+        margin-right: 10px;
+    }
+}
