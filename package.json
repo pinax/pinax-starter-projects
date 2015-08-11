@@ -20,6 +20,6 @@
     "less": "^2.5.1",
     "less-loader": "^2.2.0",
     "style-loader": "^0.12.3",
-    "webpack": "^1.10.5"
+    "webpack": "^1.11.0"
   }
 }
