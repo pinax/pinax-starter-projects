@@ -141,3 +141,18 @@ django-admin.py startproject --template=https://github.com/pinax/pinax-project/z
 
 If you want to develop your own starter projects here is the workflow you should
 follow:
+
+1. Start with the branch you want to base your new project on.
+2. `git co -b <name>`
+3. Do the work on your project template
+4. Test your project template by running `django-admin.py startproject --template=pinax-projects test1 -n webpack.config.js`
+5. Once you are satisified with your testing, commit.
+6. `git co master` and then update this `README.md` file with details about your new project
+7. Update all descendent branches:
+
+    git co zero && git merge master --no-edit
+    git co account && git merge zero --no-edit
+    git co blog && git merge zero --no-edit
+    git co static && git merge zero --no-edit
+    git co wiki && git merge account --no-edit
+    git co team-wiki && git merge wiki --no-edit
