@@ -135,3 +135,9 @@ django-admin.py startproject --template=https://github.com/pinax/pinax-project/z
 ```
 
 ##### Pinax Project Symposion
+
+
+#### Development
+
+If you want to develop your own starter projects here is the workflow you should
+follow:
