@@ -150,10 +150,14 @@ follow:
 6. `git co master` and then update this `README.md` file with details about your new project
 7. Update all descendent branches:
 
-    git co zero && git merge master --no-edit
-    git co account && git merge zero --no-edit
-    git co blog && git merge zero --no-edit
-    git co static && git merge zero --no-edit
-    git co wiki && git merge account --no-edit
-    git co team-wiki && git merge wiki --no-edit
-    git push
+```
+(
+ git co zero && git merge master --no-edit
+ git co account && git merge zero --no-edit
+ git co blog && git merge zero --no-edit
+ git co static && git merge zero --no-edit
+ git co wiki && git merge account --no-edit
+ git co team-wiki && git merge wiki --no-edit
+)
+git push
+```
