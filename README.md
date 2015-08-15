@@ -1,11 +1,11 @@
-# pinax-project
+# Pinax Starter Projects
 
 [![Join us on Slack](http://slack.pinaxproject.com/badge.svg)](http://slack.pinaxproject.com/)
 
 Pinax is a collection of Django project templates that we call starter projects
 as well as apps and themes. Many of the starter projects are derivatives of each
-other ([pinax-project-zero](http://github.com/pinax/pinax-project-zero) is a
-parent of [pinax-project-project](http://github.com/pinax/pinax-project-project)
+other ([pinax-starter-projects-zero](http://github.com/pinax/pinax-starter-projects-zero) is a
+parent of [pinax-starter-projects-project](http://github.com/pinax/pinax-starter-projects-project)
 among many others).
 
 One of the things that has become a bit of a maintenance nightmare, especially
@@ -33,7 +33,7 @@ pip install virtualenv
 virtualenv mysiteenv
 source mysiteenv/bin/activate
 pip install Django==1.8.3
-django-admin.py startproject --template=https://github.com/pinax/pinax-project/zipball/<PROJECT_BRANCH> mysite -n webpack.config.js
+django-admin.py startproject --template=https://github.com/pinax/pinax-starter-projects/zipball/<PROJECT_BRANCH> mysite -n webpack.config.js
 cd mysite
 chmod +x manage.py
 pip install -r requirements.txt
@@ -48,13 +48,13 @@ these common notes.
 
 #### Projects
 
-* [zero](https://github.com/pinax/pinax-projects/tree/zero)
-  * [account](https://github.com/pinax/pinax-projects/tree/account)
-    * [documents](https://github.com/pinax/pinax-projects/tree/documents)
-    * [wiki](https://github.com/pinax/pinax-projects/tree/wiki)
-      * [team-wiki](https://github.com/pinax/pinax-projects/tree/team-wiki)
-  * [blog](https://github.com/pinax/pinax-projects/tree/blog)
-  * [static](https://github.com/pinax/pinax-projects/tree/static)
+* [zero](https://github.com/pinax/pinax-starter-projects/tree/zero)
+  * [account](https://github.com/pinax/pinax-starter-projects/tree/account)
+    * [documents](https://github.com/pinax/pinax-starter-projects/tree/documents)
+    * [wiki](https://github.com/pinax/pinax-starter-projects/tree/wiki)
+      * [team-wiki](https://github.com/pinax/pinax-starter-projects/tree/team-wiki)
+  * [blog](https://github.com/pinax/pinax-starter-projects/tree/blog)
+  * [static](https://github.com/pinax/pinax-starter-projects/tree/static)
 * `social`
 * `social-auth`
 * `lms`
@@ -70,7 +70,7 @@ This project lays the foundation for all other Pinax starter projects. It
 provides the project directory layout and bootstrap-based theme.
 
 ```
-django-admin.py startproject --template=https://github.com/pinax/pinax-project/zipball/zero mysite -n webpack.config.js
+django-admin.py startproject --template=https://github.com/pinax/pinax-starter-projects/zipball/zero mysite -n webpack.config.js
 ```
 
 ##### Pinax Project Account
@@ -81,7 +81,7 @@ management functionality. It is a foundation suitable for most sites that have
 user accounts.
 
 ```
-django-admin.py startproject --template=https://github.com/pinax/pinax-project/zipball/account mysite -n webpack.config.js
+django-admin.py startproject --template=https://github.com/pinax/pinax-starter-projects/zipball/account mysite -n webpack.config.js
 ```
 
 ##### Pinax Project Blog
@@ -89,7 +89,7 @@ django-admin.py startproject --template=https://github.com/pinax/pinax-project/z
 This project gets you off and running with a blog.
 
 ```
-django-admin.py startproject --template=https://github.com/pinax/pinax-project/zipball/blog mysite -n webpack.config.js
+django-admin.py startproject --template=https://github.com/pinax/pinax-starter-projects/zipball/blog mysite -n webpack.config.js
 ```
 
 ##### Pinax Project Static
@@ -97,7 +97,7 @@ django-admin.py startproject --template=https://github.com/pinax/pinax-project/z
 This purpose of this starter project is to provide a robust mocking and design tool.
 
 ```
-django-admin.py startproject --template=https://github.com/pinax/pinax-project/zipball/static mysite -n webpack.config.js
+django-admin.py startproject --template=https://github.com/pinax/pinax-starter-projects/zipball/static mysite -n webpack.config.js
 ```
 
 ##### Pinax Project Social
@@ -124,7 +124,7 @@ Builds on the Accounts starter project to get you off and running with a documen
 library built around [pinax-documents](https://github.com/pinax/pinax-documents)
 
 ```
-django-admin.py startproject --template=https://github.com/pinax/pinax-project/zipball/documents mysite -n webpack.config.js
+django-admin.py startproject --template=https://github.com/pinax/pinax-starter-projects/zipball/documents mysite -n webpack.config.js
 ```
 
 ##### Pinax Project Wiki
@@ -132,7 +132,7 @@ django-admin.py startproject --template=https://github.com/pinax/pinax-project/z
 a demo starter project that provides a wiki for authenticated users
 
 ```
-django-admin.py startproject --template=https://github.com/pinax/pinax-project/zipball/wiki mysite -n webpack.config.js
+django-admin.py startproject --template=https://github.com/pinax/pinax-starter-projects/zipball/wiki mysite -n webpack.config.js
 ```
 
 
@@ -141,7 +141,7 @@ django-admin.py startproject --template=https://github.com/pinax/pinax-project/z
 a starter project that has account management with profiles and teams and basic collaborative content.
 
 ```
-django-admin.py startproject --template=https://github.com/pinax/pinax-project/zipball/team-wiki mysite -n webpack.config.js
+django-admin.py startproject --template=https://github.com/pinax/pinax-starter-projects/zipball/team-wiki mysite -n webpack.config.js
 ```
 
 ##### Pinax Project Symposion
@@ -155,7 +155,7 @@ follow:
 1. Start with the branch you want to base your new project on.
 2. `git co -b <name>`
 3. Do the work on your project template
-4. Test your project template by running `django-admin.py startproject --template=pinax-projects test1 -n webpack.config.js`
+4. Test your project template by running `django-admin.py startproject --template=pinax-starter-projects test1 -n webpack.config.js`
 5. Once you are satisified with your testing, commit.
 6. `git co master` and then update this `README.md` file with details about your new project
 7. Update all descendent branches:
