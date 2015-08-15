@@ -19,7 +19,8 @@ module.exports = {
             {
                 test: /\.(gif|png|ico|jpg|svg)$/,
                 include: [
-                    path.resolve(__dirname, "src/images")
+                    path.resolve(__dirname, "src/images"),
+                    path.resolve(__dirname, "../node_modules/jquery-chosen")
                 ],
                 loader: "file-loader?name=/images/[name].[ext]"
             },
