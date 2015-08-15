@@ -50,6 +50,7 @@ these common notes.
 
 * [zero](https://github.com/pinax/pinax-projects/tree/zero)
   * [account](https://github.com/pinax/pinax-projects/tree/account)
+    * [documents](https://github.com/pinax/pinax-projects/tree/documents)
     * [wiki](https://github.com/pinax/pinax-projects/tree/wiki)
       * [team-wiki](https://github.com/pinax/pinax-projects/tree/team-wiki)
   * [blog](https://github.com/pinax/pinax-projects/tree/blog)
@@ -117,6 +118,15 @@ django-admin.py startproject --template=https://github.com/pinax/pinax-project/z
 ##### Pinax Project Private Beta
 
 
+##### Pinax Project Documents
+
+Builds on the Accounts starter project to get you off and running with a document
+library built around [pinax-documents](https://github.com/pinax/pinax-documents)
+
+```
+django-admin.py startproject --template=https://github.com/pinax/pinax-project/zipball/documents mysite -n webpack.config.js
+```
+
 ##### Pinax Project Wiki
 
 a demo starter project that provides a wiki for authenticated users
@@ -156,6 +166,7 @@ follow:
  git co account && git merge zero --no-edit
  git co blog && git merge zero --no-edit
  git co static && git merge zero --no-edit
+ git co documents && git merge account --no-edit
  git co wiki && git merge account --no-edit
  git co team-wiki && git merge wiki --no-edit
 )
