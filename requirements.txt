@@ -1,4 +1,4 @@
-Django==1.8.3
+Django==1.8.4
 pinax-theme-bootstrap==7.0.0
 django-bootstrap-form==3.2
 pinax-blog==4.2.1
