@@ -55,7 +55,7 @@ these common notes.
 
 #### Projects
 
-* [zero](https://github.com/pinax/pinax-starter-projects/tree/zero)
+* [zero](#pinax-project-zero)
   * [account](https://github.com/pinax/pinax-starter-projects/tree/account)
     * [documents](https://github.com/pinax/pinax-starter-projects/tree/documents)
     * [wiki](https://github.com/pinax/pinax-starter-projects/tree/wiki)
