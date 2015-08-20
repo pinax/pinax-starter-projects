@@ -3,7 +3,7 @@
 [![Join us on Slack](http://slack.pinaxproject.com/badge.svg)](http://slack.pinaxproject.com/)
 
 Pinax is a collection of Django project templates that we call starter projects
-as well as apps and themes. This collection can be found at http://pinaxproject.com. 
+as well as apps and themes. This collection can be found at http://pinaxproject.com.
 Many of the starter projects are derivatives of each
 other ([pinax-starter-projects-zero](http://github.com/pinax/pinax-starter-projects-zero) is a
 parent of [pinax-starter-projects-project](http://github.com/pinax/pinax-starter-projects-project)
@@ -39,7 +39,7 @@ with a url to the template, followed by a few commands within your new project.
 pip install virtualenv
 virtualenv mysiteenv
 source mysiteenv/bin/activate
-pip install Django==1.8.3
+pip install Django==1.8.4
 django-admin.py startproject --template=https://github.com/pinax/pinax-starter-projects/zipball/<PROJECT_BRANCH> mysite -n webpack.config.js
 cd mysite
 chmod +x manage.py
