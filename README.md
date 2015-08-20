@@ -3,10 +3,17 @@
 [![Join us on Slack](http://slack.pinaxproject.com/badge.svg)](http://slack.pinaxproject.com/)
 
 Pinax is a collection of Django project templates that we call starter projects
-as well as apps and themes. Many of the starter projects are derivatives of each
+as well as apps and themes. This collection can be found at http://pinaxproject.com. 
+Many of the starter projects are derivatives of each
 other ([pinax-starter-projects-zero](http://github.com/pinax/pinax-starter-projects-zero) is a
 parent of [pinax-starter-projects-project](http://github.com/pinax/pinax-starter-projects-project)
 among many others).
+
+In order to foster a kind, inclusive, and harassment-free community, the Pinax Project has a code of conduct, which can be found here  http://pinaxproject.com/pinax/code_of_conduct/.
+
+The Pinax documentation is available at http://pinaxproject.com/pinax/.
+
+For updates and news regarding the Pinax Project, please follow us on Twitter at [@pinaxproject](https://twitter.com/pinaxproject) and check out our blog http://blog.pinaxproject.com.
 
 One of the things that has become a bit of a maintenance nightmare, especially
 as we add additional projects is keepign all these repos up to date with when
@@ -48,13 +55,13 @@ these common notes.
 
 #### Projects
 
-* [zero](https://github.com/pinax/pinax-starter-projects/tree/zero)
-  * [account](https://github.com/pinax/pinax-starter-projects/tree/account)
-    * [documents](https://github.com/pinax/pinax-starter-projects/tree/documents)
-    * [wiki](https://github.com/pinax/pinax-starter-projects/tree/wiki)
-      * [team-wiki](https://github.com/pinax/pinax-starter-projects/tree/team-wiki)
-  * [blog](https://github.com/pinax/pinax-starter-projects/tree/blog)
-  * [static](https://github.com/pinax/pinax-starter-projects/tree/static)
+* [zero](#pinax-project-zero)
+  * [account](#pinax-project-account)
+    * [documents](#pinax-project-documents)
+    * [wiki](#pinax-project-wiki)
+      * [team-wiki](#pinax-project-team-wiki)
+  * [blog](#pinax-project-blog)
+  * [static](#pinax-project-static)
 * `social`
 * `social-auth`
 * `lms`
