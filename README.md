@@ -56,12 +56,12 @@ these common notes.
 #### Projects
 
 * [zero](#pinax-project-zero)
-  * [account](https://github.com/pinax/pinax-starter-projects/tree/account)
-    * [documents](https://github.com/pinax/pinax-starter-projects/tree/documents)
-    * [wiki](https://github.com/pinax/pinax-starter-projects/tree/wiki)
-      * [team-wiki](https://github.com/pinax/pinax-starter-projects/tree/team-wiki)
-  * [blog](https://github.com/pinax/pinax-starter-projects/tree/blog)
-  * [static](https://github.com/pinax/pinax-starter-projects/tree/static)
+  * [account](#pinax-project-account)
+    * [documents](#pinax-project-documents)
+    * [wiki](#pinax-project-wiki)
+      * [team-wiki](#pinax-project-team-wiki)
+  * [blog](#pinax-project-blog)
+  * [static](#pinax-project-static)
 * `social`
 * `social-auth`
 * `lms`
