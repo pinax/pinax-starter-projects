@@ -16,7 +16,7 @@ The Pinax documentation is available at http://pinaxproject.com/pinax/.
 For updates and news regarding the Pinax Project, please follow us on Twitter at [@pinaxproject](https://twitter.com/pinaxproject) and check out our blog http://blog.pinaxproject.com.
 
 One of the things that has become a bit of a maintenance nightmare, especially
-as we add additional projects is keepign all these repos up to date with when
+as we add additional projects is keeping all these repos up to date with when
 most of the changes apply to all of them (e.g. upgrade Django version).
 
 This repo serves as an experiment as a new way of managing this.
