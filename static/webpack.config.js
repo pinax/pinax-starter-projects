@@ -40,14 +40,6 @@ module.exports = {
     },
     plugins: [
         new webpack.IgnorePlugin(/^\.\/locale$/, /moment$/),
-        new webpack.optimize.UglifyJsPlugin({
-            compress: {
-                warnings: false
-            },
-            mangle: {
-                except: ['$super', '$', 'exports', 'require']
-            }
-        }),
         new ExtractTextPlugin("css/site.css?[hash]"),
         new HtmlWebpackPlugin({
             filename: projectTemplatesRoot + "_styles.html",
