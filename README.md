@@ -127,6 +127,9 @@ django-admin.py startproject --template=https://github.com/pinax/pinax-starter-p
 
 ##### Pinax Project Waiting List
 
+```
+django-admin.py startproject --template=https://github.com/pinax/pinax-starter-projects/zipball/waitinglist mysite -n webpack.config.js
+```
 
 ##### Pinax Project Private Beta
 
