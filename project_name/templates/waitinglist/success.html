@@ -1,0 +1,30 @@
+{% extends "site_base.html" %}
+
+{% load i18n %}
+
+{% block head_title %}Thank you{% endblock %}
+
+{% block body_class %}home{% endblock %}
+
+{% block wrapper_class %}site-wrapper{% endblock %}
+
+{% block body_base %}
+    <div class="site-wrapper-inner">
+        <div class="cover-container">
+            <div class="inner cover">
+                <h1 class="cover-heading">Thank you!</h1>
+                <p class="lead">You are on the list. We will notify you know when this site launches.</p>
+                <p>
+                    If you have any questions, feel free to email <a href="mailto:{{ THEME_CONTACT_EMAIL }}"><b>{{ THEME_CONTACT_EMAIL }}</b></a>.
+                </p>
+            </div>
+            <div class="mastfoot">
+                <div class="inner">
+                    <p>{% include "_footer.html" %}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block footer_base %}{% endblock %}

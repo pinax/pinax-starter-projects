@@ -127,6 +127,9 @@ INSTALLED_APPS = [
     "bootstrapform",
     "pinax_theme_bootstrap",
 
+    # pinax
+    "pinax.waitinglist",
+
     # project
     "{{ project_name }}",
 ]

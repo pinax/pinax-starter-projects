@@ -1,2 +1,3 @@
 Django==1.8.4
 pinax-theme-bootstrap==7.0.0
+-e git+https://github.com/pinax/pinax-waitinglist.git@bb84a94cca9baca56418b037de4083b5ffae65a3#egg=pinax_waitinglist-master
