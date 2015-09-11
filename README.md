@@ -45,7 +45,7 @@ pip install virtualenv
 virtualenv mysiteenv
 source mysiteenv/bin/activate
 pip install Django==1.8.4
-django-admin.py startproject --template=https://github.com/pinax/pinax-starter-projects/zipball/<PROJECT_BRANCH> mysite -n webpack.config.js
+django-admin.py startproject --template=https://github.com/pinax/pinax-starter-projects/zipball/<PROJECT_BRANCH> mysite -n webpack.config.js -n PROJECT_README.md
 cd mysite
 chmod +x manage.py
 pip install -r requirements.txt
@@ -83,7 +83,7 @@ This project lays the foundation for all other Pinax starter projects. It
 provides the project directory layout and bootstrap-based theme.
 
 ```
-django-admin.py startproject --template=https://github.com/pinax/pinax-starter-projects/zipball/zero mysite -n webpack.config.js
+django-admin.py startproject --template=https://github.com/pinax/pinax-starter-projects/zipball/zero mysite -n webpack.config.js -n PROJECT_README.md
 ```
 
 ##### Pinax Project Account
@@ -94,7 +94,7 @@ management functionality. It is a foundation suitable for most sites that have
 user accounts.
 
 ```
-django-admin.py startproject --template=https://github.com/pinax/pinax-starter-projects/zipball/account mysite -n webpack.config.js
+django-admin.py startproject --template=https://github.com/pinax/pinax-starter-projects/zipball/account mysite -n webpack.config.js -n PROJECT_README.md
 ```
 
 ##### Pinax Project Blog
@@ -102,7 +102,7 @@ django-admin.py startproject --template=https://github.com/pinax/pinax-starter-p
 This project gets you off and running with a blog.
 
 ```
-django-admin.py startproject --template=https://github.com/pinax/pinax-starter-projects/zipball/blog mysite -n webpack.config.js
+django-admin.py startproject --template=https://github.com/pinax/pinax-starter-projects/zipball/blog mysite -n webpack.config.js -n PROJECT_README.md
 ```
 
 ##### Pinax Project Static
@@ -110,7 +110,7 @@ django-admin.py startproject --template=https://github.com/pinax/pinax-starter-p
 This purpose of this starter project is to provide a robust mocking and design tool.
 
 ```
-django-admin.py startproject --template=https://github.com/pinax/pinax-starter-projects/zipball/static mysite -n webpack.config.js
+django-admin.py startproject --template=https://github.com/pinax/pinax-starter-projects/zipball/static mysite -n webpack.config.js -n PROJECT_README.md
 ```
 
 ##### Pinax Project Social
@@ -128,7 +128,7 @@ django-admin.py startproject --template=https://github.com/pinax/pinax-starter-p
 ##### Pinax Project Waiting List
 
 ```
-django-admin.py startproject --template=https://github.com/pinax/pinax-starter-projects/zipball/waitinglist mysite -n webpack.config.js
+django-admin.py startproject --template=https://github.com/pinax/pinax-starter-projects/zipball/waitinglist mysite -n webpack.config.js -n PROJECT_README.md
 ```
 
 ##### Pinax Project Private Beta
@@ -140,7 +140,7 @@ Builds on the Accounts starter project to get you off and running with a documen
 library built around [pinax-documents](https://github.com/pinax/pinax-documents)
 
 ```
-django-admin.py startproject --template=https://github.com/pinax/pinax-starter-projects/zipball/documents mysite -n webpack.config.js
+django-admin.py startproject --template=https://github.com/pinax/pinax-starter-projects/zipball/documents mysite -n webpack.config.js -n PROJECT_README.md
 ```
 
 ##### Pinax Project Wiki
@@ -148,7 +148,7 @@ django-admin.py startproject --template=https://github.com/pinax/pinax-starter-p
 a demo starter project that provides a wiki for authenticated users
 
 ```
-django-admin.py startproject --template=https://github.com/pinax/pinax-starter-projects/zipball/wiki mysite -n webpack.config.js
+django-admin.py startproject --template=https://github.com/pinax/pinax-starter-projects/zipball/wiki mysite -n webpack.config.js -n PROJECT_README.md
 ```
 
 
@@ -157,7 +157,7 @@ django-admin.py startproject --template=https://github.com/pinax/pinax-starter-p
 a starter project that has account management with profiles and teams and basic collaborative content.
 
 ```
-django-admin.py startproject --template=https://github.com/pinax/pinax-starter-projects/zipball/team-wiki mysite -n webpack.config.js
+django-admin.py startproject --template=https://github.com/pinax/pinax-starter-projects/zipball/team-wiki mysite -n webpack.config.js -n PROJECT_README.md
 ```
 
 ##### Pinax Project Symposion
@@ -172,7 +172,7 @@ follow:
 1. Start with the branch you want to base your new project on.
 2. `git co -b <name>`
 3. Do the work on your project template
-4. Test your project template by running `django-admin.py startproject --template=pinax-starter-projects test1 -n webpack.config.js`
+4. Test your project template by running `django-admin.py startproject --template=pinax-starter-projects test1 -n webpack.config.js -n PROJECT_README.md`
 5. Once you are satisified with your testing, commit.
 6. `git co master` and then update this `README.md` file with details about your new project
 7. Update all descendent branches:
