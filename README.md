@@ -68,11 +68,11 @@ Projects
       * [team-wiki](#pinax-project-team-wiki)
   * [blog](#pinax-project-blog)
   * [static](#pinax-project-static)
+  * [waiting-list](#pinax-project-waiting-list)
 * `social`
 * `social-auth`
 * `lms`
 * `forums`
-* `waiting-list`
 * `private-beta`
 * `symposion`
 
@@ -127,6 +127,9 @@ django-admin.py startproject --template=https://github.com/pinax/pinax-starter-p
 
 ##### Pinax Project Waiting List
 
+```
+django-admin.py startproject --template=https://github.com/pinax/pinax-starter-projects/zipball/waitinglist mysite -n webpack.config.js
+```
 
 ##### Pinax Project Private Beta
 
@@ -183,6 +186,7 @@ follow:
  git co documents && git merge account --no-edit
  git co wiki && git merge account --no-edit
  git co team-wiki && git merge wiki --no-edit
+ git co waitinglist && git merge zero --no-edit
 )
 git push
 ```
