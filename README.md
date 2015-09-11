@@ -68,11 +68,11 @@ Projects
       * [team-wiki](#pinax-project-team-wiki)
   * [blog](#pinax-project-blog)
   * [static](#pinax-project-static)
+  * [waiting-list](#pinax-project-waiting-list)
 * `social`
 * `social-auth`
 * `lms`
 * `forums`
-* `waiting-list`
 * `private-beta`
 * `symposion`
 
@@ -186,6 +186,7 @@ follow:
  git co documents && git merge account --no-edit
  git co wiki && git merge account --no-edit
  git co team-wiki && git merge wiki --no-edit
+ git co waitinglist && git merge zero --no-edit
 )
 git push
 ```
