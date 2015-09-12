@@ -6,5 +6,5 @@
  git checkout documents && git merge account --no-edit
  git checkout wiki && git merge account --no-edit
  git checkout team-wiki && git merge wiki --no-edit
- git checkout waitinglist && git merge wiki --no-edit
+ git checkout waitinglist && git merge zero --no-edit
 )
