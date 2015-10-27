@@ -13,7 +13,7 @@ as well as apps and themes. This collection can be found at http://pinaxproject.
 Documentation
 ---------------
 
-The Pinax documentation is available at http://pinaxproject.com/pinax/pinax_starter_projects/.
+The pinax-starter-projects documentation is available at http://pinaxproject.com/pinax/pinax_starter_projects/. The Pinax documentation is available at http://pinaxproject.com/pinax/.
 
 
 Code of Conduct
