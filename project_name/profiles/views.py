@@ -15,7 +15,7 @@ class ProfileEditView(LoginRequiredMixin, UpdateView):
     model = Profile
 
     def get_object(self):
-        return self.request.user.get_profile()
+        return self.request.user.profile
 
     def get_success_url(self):
         return reverse("profiles_list")
