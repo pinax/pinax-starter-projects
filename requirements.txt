@@ -5,5 +5,5 @@ metron==1.3.5
 pinax-eventlog==1.0.0
 django-jsonfield==0.9.15
 
--e git+https://github.com/pinax/pinax-theme-bootstrap.git@pinax-stripe#egg=pinax-theme-bootstrap
+-e git+https://github.com/pinax/pinax-theme-bootstrap.git#egg=pinax-theme-bootstrap
 -e git+https://github.com/pinax/pinax-stripe.git#egg=pinax-stripe
