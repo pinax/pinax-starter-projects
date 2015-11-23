@@ -1,2 +1,2 @@
-Django==1.8.5
-pinax-theme-bootstrap==7.1.1
+Django==1.8.6
+pinax-theme-bootstrap==7.2.0
