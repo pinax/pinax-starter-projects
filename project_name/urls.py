@@ -21,7 +21,7 @@ urlpatterns = patterns(
     url(r"^u/(?P<username>[\w\._-]+)/$", ProfileDetailView.as_view(), name="profiles_detail"),
     url(r"^t/", include("teams.urls")),
 
-    url(r"", include("wiki.urls"))
+    url(r"", include("pinax.wiki.urls"))
 )
 
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
