@@ -1,4 +1,4 @@
-from wiki.hooks import WikiDefaultHookset
+from pinax.wiki.hooks import WikiDefaultHookset
 
 
 class ProjectWikiHookset(WikiDefaultHookset):
