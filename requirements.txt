@@ -4,5 +4,4 @@ pinax-theme-bootstrap==7.2.0
 -e git+https://github.com/pinax/django-user-accounts.git#egg=django-user-accounts
 metron==1.3.5
 pinax-eventlog==1.1.0
-
--e git+https://github.com/pinax/pinax-stripe.git#egg=pinax-stripe
+pinax-stripe==3.0.0
