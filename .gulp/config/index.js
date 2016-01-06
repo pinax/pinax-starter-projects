@@ -45,7 +45,7 @@ exports = module.exports = {
         npmPaths: [
             npmRoot + 'bootstrap/less',
             npmRoot + 'font-awesome/less',
-            npmRoot + 'jquery-chosen'
+            npmRoot
         ]
     },
     scripts: {
