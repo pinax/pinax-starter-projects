@@ -1,12 +1,10 @@
-window.jQuery = window.$ = require("jquery");
+/* global window */
+window.jQuery = window.$ = require('jquery');
 
+require('bootstrap');
+require('blueimp-file-upload')
 require("eldarion-ajax");
-require("bootstrap");
-
-require("../less/site.less");
-
-require("imports?define=>false!select2");
-require("imports?define=>false!blueimp-file-upload");
+require('select2');
 
 var fileupload = function () {
     $('.fileupload').each(function () {
