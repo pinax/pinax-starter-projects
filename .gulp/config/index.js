@@ -48,6 +48,12 @@ exports = module.exports = {
         ],
         dist: staticBuild + 'js/'
     },
+    images: {
+        source: staticSource + 'images/**.*',
+        npm: [
+        ],
+        dist: staticDist + 'images/'
+    },
     manifest: {
         source: [
             staticBuild + '**/*.css',
