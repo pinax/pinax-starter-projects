@@ -92,7 +92,7 @@ gulp.task('watch', function watch() {
 });
 
 gulp.task('build', gulp.series([
-  // 'xo',
+  'xo',
   'build:clean',
   gulp.parallel([
     'build:styles',
