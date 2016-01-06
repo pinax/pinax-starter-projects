@@ -37,7 +37,8 @@ exports = module.exports = {
         dist: staticBuild + 'css/',
         npmPaths: [
             npmRoot + 'bootstrap/less',
-            npmRoot + 'font-awesome/less'
+            npmRoot + 'font-awesome/less',
+            npmRoot
         ]
     },
     scripts: {
