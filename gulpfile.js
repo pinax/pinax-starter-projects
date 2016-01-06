@@ -48,6 +48,13 @@ gulp.task('build:bs-icons', function() {
     return tasks.copy(config.fonts.bootstrapSource)
         .pipe(gulp.dest(config.fonts.dist));
 })
+gulp.task('build:copy-images', function() {
+    var files = [config.images.source];
+    config.images.npm.forEach(function(path) {
+        files.push(path)
+    });
+    return tasks.copy(files).pipe(gulp.dest(config.images.dist));
+});
 
 gulp.task('build:script-include', function () {
     return tasks.handlebars(config.templates.manifestPath, config.templates.scriptsTemplate, config.staticUrlRoot)
@@ -98,7 +105,8 @@ gulp.task('build', gulp.series([
     'build:styles',
     'build:js',
     'build:fa-icons',
-    'build:bs-icons'
+    'build:bs-icons',
+    'build:copy-images'
   ]),
   'manifest',
   'build:script-include',
