@@ -12,8 +12,8 @@ const gulp = require('gulp');
 /**
  * Setup
  */
-const tasks = require(path.resolve(__dirname, '.gulp/tasks'));
-const config = require(path.resolve(__dirname, '.gulp/config'));
+const tasks = require(path.resolve(__dirname, 'gulp/tasks'));
+const config = require(path.resolve(__dirname, 'gulp/config'));
 
 /**
  * Tasks
