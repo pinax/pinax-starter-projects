@@ -4,25 +4,47 @@
     "url": "https://github.com/pinax/pinax-project"
   },
   "scripts": {
-     "build": "./node_modules/.bin/webpack --config=static/webpack.config.js -p",
-     "watch": "./node_modules/.bin/webpack --config=static/webpack.config.js -w"
+    "build": "NODE_PATH=. ./node_modules/.bin/gulp release",
+    "watch": "NODE_PATH=. ./node_modules/.bin/gulp",
+    "test": "./node_modules/.bin/gulp test"
   },
   "license": "",
   "dependencies": {
-    "babel-core": "^6.0.14",
-    "babel-loader": "^6.0.0",
-    "blueimp-file-upload": "^9.10.7",
-    "bootstrap": "^3.3.5",
-    "css-loader": "^0.21.0",
-    "extract-text-webpack-plugin": "^0.8.2",
-    "file-loader": "^0.8.4",
-    "font-awesome": "^4.4.0",
-    "html-webpack-plugin": "^1.6.2",
-    "imports-loader": "^0.6.4",
+    "bootstrap": "^3.3.6",
+    "font-awesome": "^4.5.0",
     "jquery": "^2.1.4",
-    "less": "^2.5.3",
-    "less-loader": "^2.2.1",
-    "style-loader": "^0.13.0",
-    "webpack": "^1.12.2"
+    "blueimp-file-upload": "^9.10.7"
+  },
+  "xo": {
+    "esnext": true,
+    "rules": {
+      "indent": 0,
+      "no-multi-spaces": 0,
+      "no-trailing-spaces": 0,
+      "brace-style": 0,
+      "babel/object-curly-spacing": 0
+    }
+  },
+  "devDependencies": {
+    "babelify": "^7.2.0",
+    "browserify": "^12.0.1",
+    "browserify-hmr": "^0.3.1",
+    "del": "^2.2.0",
+    "fs": "0.0.2",
+    "gulp": "gulpjs/gulp#4.0",
+    "gulp-autoprefixer": "^3.1.0",
+    "gulp-cleanup": "^1.0.0",
+    "gulp-compile-handlebars": "^0.6.1",
+    "gulp-cssnano": "^2.0.0",
+    "gulp-less": "^3.0.5",
+    "gulp-mocha": "^2.2.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-rev": "^6.0.1",
+    "gulp-size": "^2.0.0",
+    "gulp-uglify": "^1.5.1",
+    "gulp-util": "^3.0.7",
+    "gulp-xo": "^0.7.0",
+    "vinyl-source-stream": "^1.1.0",
+    "watchify": "^3.6.1"
   }
 }

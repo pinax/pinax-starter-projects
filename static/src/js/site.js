@@ -1,10 +1,8 @@
-window.jQuery = window.$ = require("jquery");
+/* global window */
+window.jQuery = window.$ = require('jquery');
 
-require("bootstrap");
-
-require("../less/site.less");
-
-require("imports?define=>false!blueimp-file-upload");
+require('bootstrap');
+require('blueimp-file-upload')
 
 var fileupload = function () {
     $('.fileupload').each(function () {
