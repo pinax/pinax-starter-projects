@@ -28,8 +28,10 @@ exports = module.exports = {
         stylesTemplate: staticSource + 'hbs/_styles.hbs',
     },
     fonts: {
-        fontAwesomeSource: npmRoot + 'font-awesome/fonts/**.*',
-        bootstrapSource: npmRoot + 'bootstrap/fonts/**.*',
+        sources: [
+            npmRoot + 'font-awesome/fonts/**.*',
+            npmRoot + 'bootstrap/fonts/**.*',
+        ],
         dist: staticDist + 'fonts/'
     },
     images: {
@@ -56,8 +58,8 @@ exports = module.exports = {
         dist: staticBuild + 'js/'
     },
     images: {
-        source: staticSource + 'images/**.*',
-        npm: [
+        sources: [
+            staticSource + 'images/**.*'
         ],
         dist: staticDist + 'images/'
     },
