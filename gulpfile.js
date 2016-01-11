@@ -40,20 +40,12 @@ gulp.task('manifest', function manifest() {
     .pipe(gulp.dest(config.paths.build));
 });
 
-gulp.task('build:fa-icons', function() { 
-    return tasks.copy(config.fonts.fontAwesomeSource)
+gulp.task('build:copy-icons', function() { 
+    return tasks.copy(config.fonts.sources)
         .pipe(gulp.dest(config.fonts.dist)); 
 });
-gulp.task('build:bs-icons', function() {
-    return tasks.copy(config.fonts.bootstrapSource)
-        .pipe(gulp.dest(config.fonts.dist));
-})
 gulp.task('build:copy-images', function() {
-    var files = [config.images.source];
-    config.images.npm.forEach(function(path) {
-        files.push(path)
-    });
-    return tasks.copy(files).pipe(gulp.dest(config.images.dist));
+    return tasks.copy(config.images.sources).pipe(gulp.dest(config.images.dist));
 });
 
 gulp.task('build:script-include', function () {
@@ -104,8 +96,7 @@ gulp.task('build', gulp.series([
   gulp.parallel([
     'build:styles',
     'build:js',
-    'build:fa-icons',
-    'build:bs-icons',
+    'build:copy-icons',
     'build:copy-images'
   ]),
   'manifest',
