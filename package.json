@@ -6,6 +6,7 @@
   "scripts": {
     "build": "NODE_PATH=. ./node_modules/.bin/gulp release",
     "watch": "NODE_PATH=. ./node_modules/.bin/gulp",
+    "lint": "NODE_PATH=. ./node_modules/.bin/gulp xo",
     "test": "./node_modules/.bin/gulp test"
   },
   "license": "",
