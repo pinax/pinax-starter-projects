@@ -133,14 +133,10 @@ INSTALLED_APPS = [
     "account",
     "metron",
     "pinax.eventlog",
-<<<<<<< HEAD
     "easy_thumbnails",
     "kaleo",
     "teams",
-    "wiki",
-=======
     "pinax.wiki",
->>>>>>> wiki
 
     # project
     "{{ project_name }}",
@@ -180,15 +176,11 @@ FIXTURE_DIRS = [
     os.path.join(PROJECT_ROOT, "fixtures"),
 ]
 
-<<<<<<< HEAD
-WIKI_HOOKSET = "{{ project_name }}.hooks.ProjectWikiHookset"
-WIKI_BINDERS = [
+PINAX_WIKI_HOOKSET = "{{ project_name }}.hooks.ProjectWikiHookset"
+PINAX_WIKI_BINDERS = [
     "{{ project_name }}.binders.UserBinder",
     "{{ project_name }}.binders.TeamBinder"
 ]
-=======
-PINAX_WIKI_HOOKSET = "{{ project_name }}.hooks.ProjectWikiHookset"
->>>>>>> wiki
 EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend"
 
 ACCOUNT_OPEN_SIGNUP = True
