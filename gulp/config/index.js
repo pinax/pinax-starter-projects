@@ -1,4 +1,4 @@
-const templatePath = '{{ project_name }}/templates/';
+const templatePath = 'project_name/templates/';
 const staticRoot = 'static/';
 const staticSource = staticRoot + 'src/';
 const staticBuild = staticRoot + '_build/';
@@ -34,13 +34,6 @@ exports = module.exports = {
         ],
         dist: staticDist + 'fonts/'
     },
-    images: {
-        source: staticSource + 'images/**.*',
-        npm: [
-            npmRoot + 'jquery-chosen/*.png'
-        ],
-        dist: staticDist + 'images/'
-    },
     styles: {
         source: staticSource + 'less/site.less',
         dist: staticBuild + 'css/',
@@ -59,7 +52,8 @@ exports = module.exports = {
     },
     images: {
         sources: [
-            staticSource + 'images/**.*'
+            staticSource + 'images/**.*',
+            npmRoot + 'jquery-chosen/*.png'
         ],
         dist: staticDist + 'images/'
     },
