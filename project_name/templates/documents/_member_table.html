@@ -1,74 +1,47 @@
 {% load account_tags documents_tags %}
-<div class="well actions-bar">
-    {% if members %}
-        <div class="arrow"></div>
-        <form method="POST" action="{% url 'documents_document_delete' %}">{% csrf_token %}<input type="hidden" name="next" value="{{ request.path }}" /><button type="submit" class="btn"><i class="icon-trash"></i> Delete</button></form>
-    {% endif %}
-    <div class="btn-group">
-        <a href="{% url 'documents_folder_create' %}{% if folder %}?p={{ folder.id }}{% endif %}" class="btn"><i class="icon-plus-sign"></i> Create folder</a>
-        <a href="{% url 'documents_document_create' %}{% if folder %}?f={{ folder.id }}{% endif %}" class="btn"><i class="icon-upload"></i> Upload file</a>
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <div class="btn-group pull-right">
+            <a href="{% url 'documents_folder_create' %}{% if folder %}?p={{ folder.id }}{% endif %}" class="btn btn-xs btn-default"><i class="fa fa-fw fa-plus"></i> Create folder</a>
+            <a href="{% url 'documents_document_create' %}{% if folder %}?f={{ folder.id }}{% endif %}" class="btn btn-xs btn-default"><i class="fa fa-fw fa-upload"></i> Upload file</a>
+            {% if folder|can_share:user %}<a href="{% url 'documents_folder_share' folder.id %}" class="btn btn-xs btn-default"><i class="fa fa-fw fa-share"></i> Share</a>{% endif %}
+        </div>
+        <h3 class="panel-title">{{ folder.name }}</h3>
     </div>
-    {% if folder|can_share:user %}<a href="{% url 'documents_folder_share' folder.id %}" class="btn"><i class="icon-share"></i> Share</a>{% endif %}
-</div>
 {% if members %}
-    <table class="table">
+    <table class="table table-bordered table-condensed">
         <thead>
-            <th><input type="checkbox" class="select-all" /></th>
-            <th>Type</th>
             <th>Name</th>
+            <th>Size</th>
+            <th>Modified At</th>
+            <th>Modified By</th>
             <th>Actions</th>
         </thead>
         <tbody>
             {% for member in members %}
                 <tr>
                     <td>
-                        <input type="checkbox" />
-                    </td>
-                    <td>
-                        <i class="icon-{{ member.icon }}"></i>
-                    </td>
-                    <td>
+                        <i class="fa fa-fw fa-{{ member.icon }}"></i>
                         <a href="{{ member.get_absolute_url }}"><strong>{{ member.name }}</strong></a><br />
-                        Updated {{ member.modified|date:"N j, Y" }} by {% user_display member.modified_by %} {% if member.shared_ui %}<b>[shared]</b>{% endif %}
                     </td>
+                    <td>{{ member.size|readable_bytes }}</td>
+                    <td>{{ member.modified|date:"N j, Y" }}</td>
+                    <td>{% user_display member.modified_by %} {% if member.shared_ui %}<b>[shared]</b>{% endif %}</td>
                     <td>
-                        <div class="dropdown file-actions">
-                            <a class="btn btn-mini dropdown-toggle" data-toggle="dropdown" href="#">
-                                <b class="caret"></b>
-                            </a>
-                            <ul class="dropdown-menu">
-                                {% if member.icon == "file" %}
-                                    <li><a href="{{ member.download_url }}"><i class="icon-download"></i> download</a></li>
-                                    <li><a data-toggle="modal" href="#member-{{ member.unique_id }}"><i class="icon-cog"></i> properties</a></li>
-                                    <li><a href="#"><i class="icon-trash"></i> delete</a></li>
-                                {% else %}
-                                    <li><a href="{{ member.get_absolute_url }}"><i class="icon-folder-open"></i> open</a></li>
-                                    <li><a href="{% url 'documents_document_create' %}?f={{ member.id }}"><i class="icon-upload"></i> upload to this folder</a></li>
-                                    {% if member|can_share:user %}<li><a href="{% url 'documents_folder_share' member.id %}"><i class="icon-share"></i> share</a></li>{% endif %}
-                                    <li><a data-toggle="modal" href="#member-{{ member.unique_id }}"><i class="icon-cog"></i> properties</a></li>
-                                    <li><form method="POST" action="{% url 'documents_document_delete' %}">{% csrf_token %}<input type="hidden" name="next" value="{{ request.path }}" /><button type="submit" class="btn"><i class="icon-trash"></i> delete</button></form></li>
-                                {% endif %}
-                            </ul>
-                        </div>
+                        {% if member.icon == "file" %}
+                            <a class="btn btn-xs btn-default" href="{{ member.download_url }}"><i class="fa fa-fw fa-download"></i> download</a>
+                            <a class="btn btn-xs btn-default" href="#"><i class="fa fa-fw fa-trash"></i> delete</a>
+                        {% else %}
+                            <a class="btn btn-xs btn-default" href="{{ member.get_absolute_url }}"><i class="fa fa-fw fa-folder-open"></i> open</a>
+                            <a class="btn btn-xs btn-default" href="{% url 'documents_document_create' %}?f={{ member.id }}"><i class="fa fa-fw fa-upload"></i> upload to this folder</a>
+                            {% if member|can_share:user %}<a class="btn btn-xs btn-default" href="{% url 'documents_folder_share' member.id %}"><i class="fa fa-fw fa-share"></i> share</a>{% endif %}
+                        {% endif %}
                     </td>
                 </tr>
             {% endfor %}
         </tbody>
     </table>
-    {% for member in members %}
-        <div class="modal hide" id="member-{{ member.unique_id }}">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal">×</button>
-                <h3>Properties for {{ member.name }}</h3>
-            </div>
-            <div class="modal-body">
-                <b>Size:</b> {{ member.size|readable_bytes }}
-            </div>
-            <div class="modal-footer">
-                <a href="#" class="btn" data-dismiss="modal">Close</a>
-            </div>
-        </div>
-    {% endfor %}
 {% else %}
     <p>No folders or files</p>
 {% endif %}
+</div>
