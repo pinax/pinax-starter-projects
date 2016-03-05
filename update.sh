@@ -1,5 +1,4 @@
 (
- git checkout zero && git merge master --no-edit
  git checkout account && git merge zero --no-edit
  git checkout blog && git merge zero --no-edit
  git checkout static && git merge zero --no-edit
