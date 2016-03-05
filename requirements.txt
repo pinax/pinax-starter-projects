@@ -1,5 +1,5 @@
 Django==1.9.3
-pinax-theme-bootstrap==7.3.0
+pinax-theme-bootstrap==7.4.0
 django-bootstrap-form==3.2
 pinax-blog==4.3.0
 pytz==2015.7
