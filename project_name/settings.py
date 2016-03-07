@@ -133,8 +133,8 @@ INSTALLED_APPS = [
 
     # external
     "account",
-    "metron",
     "pinax.eventlog",
+    "pinax.webanalytics",
     "social.apps.django_app.default",
 
     # project
