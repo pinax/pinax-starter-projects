@@ -131,8 +131,8 @@ INSTALLED_APPS = [
 
     # external
     "account",
-    "metron",
     "pinax.eventlog",
+    "pinax.webanalytics",
 
     # project
     "{{ project_name }}",
