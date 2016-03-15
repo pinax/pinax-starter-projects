@@ -20,7 +20,7 @@
         <meta name="twitter:site" content="@pinaxproject">
         {% endcomment %}
         <meta property="og:site_name" content="{{ SITE_NAME }}">
-        <link rel="alternate" type="application/atom+xml" href="{% url 'blog_feed' 'all' 'atom' %}" title="Atom Feed for Blog">
+        <link rel="alternate" type="application/atom+xml" href="{% url 'pinax_blog:blog_feed' 'all' 'atom' %}" title="Atom Feed for Blog">
     {% endblock %}
 {% endblock %}
 
