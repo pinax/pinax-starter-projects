@@ -16,7 +16,10 @@
                 <p class="lead">
                     Once this site is ready to launch, you will be emailed.
                 </p>
-                {% url "waitinglist_list_signup" as url %}
+                {% if form.email.errors %}
+                    <b>{{ form.email.errors.0 }}</b>
+                {% endif %}
+                {% url "pinax_waitinglist:list_signup" as url %}
                 <form method="POST" action="{{ url }}" class="form-inline">
                     {% csrf_token %}
                     <div class="form-group">
