@@ -1,0 +1,24 @@
+{% extends "site_base.html" %}
+
+{% load bootstrap %}
+
+{% block body %}
+
+<h1>You're on the List</h1>
+
+<p class="lead">
+    We'll send you an invitation when we're ready for the private beta.
+<br/>
+    In the meantime, it would be great if you could answer a few questions (all optional)...
+</p>
+
+<div class="row">
+<form class="form survey col-md-6" method="post" action=".">
+    {% csrf_token %}
+    {{ form|bootstrap }}
+    <div class="form-actions pull-right">
+        <button class="btn btn-primary">Save</button>
+    </div>
+</form>
+</div>
+{% endblock %}
