@@ -130,10 +130,17 @@ INSTALLED_APPS = [
 
     # pinax
     "pinax.waitinglist",
+    "pinax.webanalytics",
 
     # project
     "{{ project_name }}",
 ]
+
+PINAX_WEBANALYTICS_SETTINGS = {
+    # "google": {
+    #     2: "",
+    # }
+}
 
 # A sample logging configuration. The only tangible logging
 # performed by this configuration is to send an email to
