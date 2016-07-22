@@ -1,8 +1,10 @@
 {% extends "site_base.html" %}
 
 {% load i18n %}
+{% load pinax_events_tags %}
+{% load pinax_news_tags %}
 
-{% block head_title %}pinax-project-zero{% endblock %}
+{% block head_title %}pinax-project-company{% endblock %}
 
 {% block body_class %}home{% endblock %}
 
@@ -10,7 +12,7 @@
     <section class="jumbotron">
         <div class="container">
             {% include "_messages.html" %}
-            <h1>{% blocktrans %}Welcome to<br>pinax-project-zero{% endblocktrans %}</h1>
+            <h1>{% blocktrans %}Welcome to<br>pinax-project-company{% endblocktrans %}</h1>
             <p>
                 {% blocktrans %}
                 This project lays the foundation for all other Pinax starter projects.
@@ -54,6 +56,67 @@
                     <b>Themes</b> provide default templates and
                     stylesheets for quick prototyping and easy customization.
                     {% endblocktrans %}
+                </div>
+            </div>
+            <div class="news-events-columns">
+                <div>
+                    <h3>News</h3>
+                    {% news as news_list %}
+                    {% for news_item in news_list %}
+                        <article class="news-article">
+                            <h3>
+                                <a href="{{ news_item.url }}">
+                                    {% if news_item.image %}<img src="{{ news_item.image.url }}" /><br />{% endif %}
+                                    <span>{{ news_item.title }}</span>
+                                </a>
+                            </h3>
+                        </article>
+                    {% endfor %}
+                </div>
+                <div>
+                    <h3>Press Releases</h3>
+                    {% press_releases as press_release_list %}
+                    {% for press_release in press_release_list %}
+                        <article class="press-release">
+                            <h3>
+                                <a href="{{ press_release.url }}">
+                                    {% if press_release.image %}<img src="{{ press_release.image.url }}" width="168" />{% endif %}
+                                    <span>{{ press_release.title }}</span>
+                                </a>
+                            </h3>
+                        </article>
+                    {% endfor %}
+                </div>
+                <div>
+                    <h3>Events</h3>
+                    {% events as event_list %}
+                    {% for event in event_list %}
+                        <article class="event">
+                            {% if event.image %}
+                            <section class="event-img">
+                                <a href="{{ event.url }}">
+                                    <img src="{{ event.image.url }}" width="200" />
+                                </a>
+                            </section>
+                            {% endif %}
+                            <ul class="event-details">
+                                <li>
+                                    <h2><a href="{{ event.url }}">{{ event.title }}</a></h2>
+                                </li>
+                                <li class="meta">
+                                    <span>
+                                        Where: {{ event.where }}
+                                    </span>
+                                    <span>
+                                        When: {{ event.start_date }}&endash;{{ event.end_start }}
+                                    </span>
+                                </li>
+                                <li class="event-description">
+                                    {{ event.what_html|safe }}
+                                </li>
+                            </ul>
+                        </article>
+                    {% endfor %}
                 </div>
             </div>
         </div>

@@ -18,3 +18,19 @@ form.form-search {
     font-size: 13px;
   }
 }
+.news-events-columns,
+.feature-columns {
+    .make-row();
+
+    > div {
+        i.fa {
+            margin-bottom: 0.2em;
+        }
+        .make-sm-column(4);
+        .text-center;
+        margin: 2em 0;
+    }
+}
+.event-details {
+    list-style: none;
+}

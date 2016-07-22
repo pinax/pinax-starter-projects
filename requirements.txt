@@ -1,5 +1,9 @@
 Django==1.9.5
+pinax-theme-bootstrap==7.8.0
+
 pinax-blog==5.0.1
+pinax-events==0.1
+pinax-news==0.1
+
 Markdown==2.6.6
 Pillow==3.1.1
-pinax-theme-bootstrap==7.8.0

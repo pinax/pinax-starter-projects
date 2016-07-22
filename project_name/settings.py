@@ -129,8 +129,10 @@ INSTALLED_APPS = [
     "bootstrapform",
     "pinax_theme_bootstrap",
 
-    # external
+    # pinax
     "pinax.blog",
+    "pinax.events",
+    "pinax.news",
 
     # project
     "{{ project_name }}",
