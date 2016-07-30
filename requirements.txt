@@ -1,4 +1,4 @@
-pinax-blog==5.0.1
+pinax-blog==5.0.2
 Markdown==2.6.6
 Pillow==3.1.1
 
