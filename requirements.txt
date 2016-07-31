@@ -3,5 +3,5 @@ Markdown==2.6.6
 Pillow==3.1.1
 
 Django==1.9.8
-pinax-theme-bootstrap==7.10.0
+pinax-theme-bootstrap==7.10.1
 
