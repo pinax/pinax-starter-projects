@@ -10,13 +10,13 @@
     <section class="jumbotron">
         <div class="container">
             {% include "_messages.html" %}
-            <h1>{% blocktrans %}Welcome to<br>pinax-project-account{% endblocktrans %}</h1>
+            <h1>{% blocktrans %}Welcome to<br>Pinax Documents Project{% endblocktrans %}</h1>
             <p>
                 {% blocktrans %}
-                In addition to what is provided by the "zero" project, this project
-                provides thorough integration with django-user-accounts, adding
-                comprehensive account management functionality. It is a foundation
-                suitable for most sites that have user accounts.
+                In addition to what is provided by the "account" project, this project
+                provides thorough integration of <a href="https://github.com/pinax/pinax-documents">pinax-documents</a>,
+                <a href="https://github.com/pinax/pinax-comments">pinax-comments</a> and
+                <a href="https://github.com/pinax/pinax-ratings">pinax-ratings</a>.
                 {% endblocktrans %}
             </p>
             {% if not user.is_authenticated %}
