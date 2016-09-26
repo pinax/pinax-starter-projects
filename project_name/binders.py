@@ -2,8 +2,8 @@ from django.core.urlresolvers import reverse
 
 from django.contrib.auth.models import User
 
-from teams.models import Team
-from wiki.binders import Binder
+from pinax.teams.models import Team
+from pinax.wiki.binders import Binder
 
 
 class UserBinder(Binder):
