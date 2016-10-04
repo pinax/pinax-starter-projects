@@ -12,6 +12,7 @@
   "license": "",
   "dependencies": {
     "bootstrap": "^3.3.7",
+    "card": "^2.0.3",
     "font-awesome": "^4.6.3",
     "jquery": "^2.2.4"
   },

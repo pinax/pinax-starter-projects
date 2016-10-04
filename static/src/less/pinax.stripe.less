@@ -6,3 +6,40 @@ body.pinax-stripe-invoices .pinax-stripe-invoices {
     background-color: @list-group-active-bg;
     border-color: @list-group-active-border;
 }
+
+.card {
+    width: 350px;
+    margin: 5px auto;
+    .form-control {
+        margin: 5px 0;
+    }
+    input.card-number,
+    input.card-name {
+        width: 170px;
+    }
+    input.card-number,
+    input.card-exp-month,
+    input.card-exp-year {
+        margin-right: 10px;
+    }
+    input.card-number,
+    input.card-name,
+    input.card-exp-month,
+    input.card-exp-year,
+    input.card-cvc {
+        .pull-left;
+    }
+    input.card-exp-month {
+        width: 80px;
+    }
+    input.card-exp-year {
+        width: 150px;
+    }
+    input.card-cvc {
+        width: 100px;
+    }
+    button {
+        .pull-right;
+        margin-top: 5px;
+    }
+}

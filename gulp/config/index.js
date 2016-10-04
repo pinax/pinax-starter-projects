@@ -70,7 +70,8 @@ exports = module.exports = {
     xo: {
        source: [
          'tasks/**/*.js',
-         staticSource + '**/*.js'
+         staticSource + '**/*.js',
+         '!' + staticSource + 'js/card.js'
        ]
    },
    optimize: {
