@@ -6,7 +6,7 @@
 
 
 {% block styles %}
-    {% include "_styles.html" %}
+    <link href="{% static "css/site.css" %}" rel="stylesheet" />
 {% endblock %}
 
 {% block nav %}
@@ -27,7 +27,7 @@
 
 
 {% block scripts %}
-    {% include "_scripts.html" %}
+    <script src="{% static "js/site.js" %}"></script>
 {% endblock %}
 
 {% block extra_body_base %}
