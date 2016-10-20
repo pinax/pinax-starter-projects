@@ -1,5 +1,4 @@
 *.pyc
 node_modules/
-_build/
 dev.db
 site_media/
