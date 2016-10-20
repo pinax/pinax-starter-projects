@@ -6,5 +6,4 @@ const $ = window.$;
 require('bootstrap');
 
 $(() => {
-    console.log('document ready');
 });
