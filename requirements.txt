@@ -1,8 +1,8 @@
 pinax-blog==5.0.2
-Markdown==2.6.6
+Markdown==2.6.7
 Pillow==3.1.1
-pinax-events==0.1
-pinax-news==0.1
+pinax-events==1.1.1
+pinax-news==1.1.2
 
 Django==1.10.2
 pinax-theme-bootstrap==7.11.0
