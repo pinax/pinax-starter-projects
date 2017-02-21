@@ -100,8 +100,8 @@ TEMPLATES = [
                 "django.contrib.messages.context_processors.messages",
                 "account.context_processors.account",
                 "pinax_theme_bootstrap.context_processors.theme",
-                "social.apps.django_app.context_processors.backends",
-                "social.apps.django_app.context_processors.login_redirect",
+                "social_django.context_processors.backends",
+                "social_django.context_processors.login_redirect",
             ],
         },
     },
@@ -139,7 +139,7 @@ INSTALLED_APPS = [
     "account",
     "pinax.eventlog",
     "pinax.webanalytics",
-    "social.apps.django_app.default",
+    "social_django",
 
     # project
     "{{ project_name }}",
@@ -189,7 +189,7 @@ ACCOUNT_EMAIL_CONFIRMATION_EXPIRE_DAYS = 2
 ACCOUNT_USE_AUTH_AUTHENTICATE = True
 
 AUTHENTICATION_BACKENDS = [
-    "social.backends.twitter.TwitterOAuth",
+    "social_core.backends.twitter.TwitterOAuth",
     "account.auth_backends.UsernameAuthenticationBackend",
 ]
 

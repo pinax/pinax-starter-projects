@@ -1,5 +1,5 @@
 django-user-accounts==2.0.0
-python-social-auth==0.2.13
+social-auth-app-django==1.1.0
 pinax-webanalytics==2.0.4
 pinax-eventlog==1.1.2
 
