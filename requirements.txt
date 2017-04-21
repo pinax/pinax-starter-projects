@@ -1,10 +1,10 @@
-django-user-accounts==2.0.0
+django-user-accounts==2.0.1
 pinax-wiki==0.2.2
 Pillow==2.9.0
 easy-thumbnails==2.2
 pinax-teams==0.12.1
 django-reversion==1.10.2
-pinax-webanalytics==2.0.4
+pinax-webanalytics==3.0.0
 pinax-eventlog==1.1.2
 
 Django==1.11
