@@ -3,6 +3,7 @@ window.jQuery = window.$ = require('jquery');
 
 const $ = window.$;
 
+window.Popper = require('popper.js');
 require('bootstrap');
 
 require('blueimp-file-upload');
