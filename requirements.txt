@@ -1,4 +1,4 @@
-django-user-accounts==2.0.1
+django-user-accounts==2.0.3
 pinax-wiki==0.2.2
 pinax-webanalytics==3.0.0
 pinax-eventlog==1.1.2
