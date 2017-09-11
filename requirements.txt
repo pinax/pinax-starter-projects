@@ -1,4 +1,4 @@
-django-user-accounts==2.0.1
+django-user-accounts==2.0.3
 pinax-wiki==0.2.2
 Pillow==2.9.0
 easy-thumbnails==2.2
