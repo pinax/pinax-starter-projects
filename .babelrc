@@ -1,7 +1,10 @@
 {
   "presets": [
-    "es2015",
-    "stage-1"
+    ["env", {
+      "targets": {
+        "browsers": ["last 2 versions", "safari >= 7", "ie >= 8"]
+      }
+    }]
   ],
   "ignore": [
     "node_modules/",
