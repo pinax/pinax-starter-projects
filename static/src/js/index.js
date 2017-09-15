@@ -10,6 +10,8 @@ require('blueimp-file-upload');
 require('eldarion-ajax');
 require('select2');
 
+import ajaxSendMethod from './ajax';
+
 const fileupload = () => {
     $('.fileupload').each(() => {
         const $that = $(this);
@@ -113,12 +115,28 @@ const loadImage = evt => {
 };
 
 $(() => {
+    $(document).ajaxSend(ajaxSendMethod);
+    // Topbar active tab support
+    $('.topbar li').removeClass('active');
+
+    const classList = $('body').attr('class').split(/\s+/);
+    $.each(classList, (index, item) => {
+        const selector = `ul.nav li#tab_${item}`;
+        $(selector).addClass('active');
+    });
+
+    $('#account_logout, .account_logout').click(e => {
+        e.preventDefault();
+        $('#accountLogOutForm').submit();
+    });
+
     loadSelect2();
     $(document).on('eldarion-ajax:complete', (evt, el) => {
         if ($(el).hasClass('invite-form')) {
             loadSelect2();
         }
     });
+
     $(document).on('click', '.file-browse', e => {
         e.preventDefault();
         $('.fileupload').click();
