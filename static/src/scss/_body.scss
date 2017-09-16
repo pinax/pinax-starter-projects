@@ -1,3 +1,7 @@
+#content_body {
+  @extend .container;
+}
+
 footer {
   position: absolute;
   bottom: 0;
