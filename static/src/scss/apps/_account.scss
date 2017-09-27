@@ -5,78 +5,102 @@ body.account {
     @extend .active;
   }
   .subnav-container {
-    margin-top: 15px;
-    @extend .row;
+    margin-top: 20px;
+    @extend .d-sm-flex;
     .settings-nav {
-      @extend .col-sm-12;
-      @extend .col-md-6;
-      @extend .col-lg-4;
-      @extend .list-group;
-      .heading {
-        @extend .list-group-item;
-        h5 {
-          @extend .mb-1;
-        }
-      }
+      @extend .nav;
+      @extend .flex-column;
+      @extend .nav-pills;
       a {
-        @extend .list-group-item;
-        @extend .list-group-item-action;
+        @extend .nav-link;
       }
     }
     section {
-      @extend .col-sm-12;
-      @extend .col-md-6;
-      @extend .col-lg-8;
+        // margin-left: 20px;
+        form {
+            margin-top: 20px;
+            width: 100%;
+            button {
+                @extend .btn;
+                @extend .btn-primary;
+            }
+        }
     }
   }
-  .login,
-  .logout,
-  .signup,
-  .password-reset,
-  .email-confirmation,
-  .password-reset-sent,
-  .password-reset-token {
-    margin-top: 15px;
-    @extend .row;
-    >div {
-      @extend .col-sm-12;
-      @extend .col-md-6;
-      @extend .col-lg-4;
-      form {
-        legend {}
-        button {
-          @extend .btn;
-          @extend .btn-primary;
-        }
-        a.forgot-password {
-          display: block;
-          margin: 5px 0;
-          font-size: 90%;
-        }
+  @media (min-width: 576px) {  // @include media-breakpoint-up(xs) { ... } seems to be ignored
+      .subnav-container {
+          section {
+              margin-left: 20px;
+              form {
+                  margin-top: 0;
+                  width: 400px;
+              }
+          }
       }
-      p.login-signup {
-        margin-top: 15px;
-        background-color: $gray-100;
-        padding: 10px 15px;
-        border-radius: 5px;
-        border: 1px solid $gray-200;
-        color: $gray-700;
-        text-align: center;
+  }
+}
+
+body.account-delete {
+  .subnav-container {
+      section {
+          form {
+              button {
+                  @extend .btn-danger;
+              }
+          }
       }
-      .has-error {
-        .help-block {
-          color: $red;
-        }
+  }
+}
+
+body.account {
+  &.account-login,
+  &.account-logout,
+  &.account-signup,
+  &.account-password-reset,
+  &.account-email-confirmation {
+      main {
+          >div {
+              @extend .d-flex;
+              @extend .justify-content-center;
+              form {
+                  margin-top: 0px;
+                  width: 100%;
+                  legend {}
+                  button {
+                      @extend .btn;
+                      @extend .btn-primary;
+                  }
+                  a.forgot-password {
+                      display: block;
+                      margin: 5px 0;
+                      font-size: 90%;
+                  }
+                  p.login-signup {
+                      margin-top: 15px;
+                      background-color: $gray-100;
+                      padding: 10px 15px;
+                      border-radius: 5px;
+                      border: 1px solid $gray-200;
+                      color: $gray-700;
+                      text-align: center;
+                  }
+                  .has-error {
+                      .help-block {
+                          color: $red;
+                      }
+                  }
+                  p.help-text {
+                      margin-top: 35px;
+                      font-size: 80%;
+                  }
+              }
+              @media (min-width: 576px) {  // @include media-breakpoint-up(xs) { ... } seems to be ignored
+                  form {
+                      margin-top: 100px;
+                      width: 300px;
+                  }
+              }
+          }
       }
-      p.help-text {
-        margin-top: 35px;
-        font-size: 80%;
-      }
-    }
-    >aside {
-      @extend .col-sm-12;
-      @extend .col-md-4;
-      @extend .col-lg-4;
-    }
   }
 }
