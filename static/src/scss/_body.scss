@@ -1,0 +1,18 @@
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+main {
+  flex: 1;
+  > div {
+    @extend .container;
+  }
+}
+footer {
+  padding: 20px 0;
+  background-color: $footer-bg-color;
+  > div {
+    @extend .container;
+  }
+}
