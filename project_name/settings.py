@@ -147,6 +147,9 @@ INSTALLED_APPS = [
 PINAX_STRIPE_SECRET_KEY = ""  # begins with sk_
 PINAX_STRIPE_PUBLIC_KEY = ""  # beings with pk_
 
+ADMIN_URL = "admin:index"
+CONTACT_EMAIL = "support@example.com"
+
 # A sample logging configuration. The only tangible logging
 # performed by this configuration is to send an email to
 # the site admins on every HTTP 500 error when DEBUG=False.
