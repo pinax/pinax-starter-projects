@@ -1,0 +1,184 @@
+.usage-container {
+    .usage {
+        @extend .progress;
+        .usage-meter {
+            @extend .progress-bar;
+            @for $i from 0 through 100 {
+                &.usage-#{$i} {
+                    width: round(percentage($i/100));
+                }
+            }
+        }
+
+        &.usage-danger {
+            .usage-meter {
+                background: $danger;
+            }
+        }
+        &.usage-success {
+            .usage-meter {
+                background: $success;
+            }
+        }
+        &.usage-info {
+            .usage-meter {
+                background: $info;
+            }
+        }
+        &.usage-primary {
+            .usage-meter {
+                background: $primary;
+            }
+        }
+        &.usage-warning {
+            .usage-meter {
+                background: $warning;
+            }
+        }
+    }
+    .usage-label {
+        font-size: 0.8rem;
+        text-align: center;
+        color: $gray-700;
+    }
+    margin: 20px 0;
+}
+
+.member-table-container {
+    .folder-actions {
+        a {
+            @extend .btn;
+            @extend .btn-sm;
+            @include button-outline-variant($primary);
+            &.action-folder-create {
+                i {
+                    @include icon(plus);
+                }
+            }
+            &.action-document-create {
+                i {
+                    @include icon(upload);
+                }
+            }
+            &.action-folder-share {
+                i {
+                    @include icon(share);
+                }
+            }
+            &.action-folder-delete {
+                @include button-outline-variant($danger);
+                i {
+                    @include icon(trash);
+                }
+            }
+        }
+    }
+    table {
+        @extend .table-sm;
+    }
+
+    .member-shared {
+        @extend .badge;
+        @extend .badge-info;
+    }
+
+    .member-name {
+        i.file {
+            @extend .fa-fw;
+            @include icon(file-o);
+        }
+        i.folder-open {
+            @extend .fa-fw;
+            @include icon(folder-open-o);
+        }
+    }
+
+    .member-actions-download,
+    .member-actions-upload,
+    .member-actions-share,
+    .member-actions-delete {
+        @extend .btn;
+        @extend .btn-sm;
+        padding: 0.1rem 0.5rem;
+        @include button-outline-variant($primary);
+    }
+    .member-actions-download {
+        i {
+            @include icon(plus);
+        }
+    }
+    .member-actions-upload {
+        i {
+            @include icon(upload);
+        }
+    }
+    .member-actions-share {
+        i {
+            @include icon(share);
+        }
+    }
+    .member-actions-delete {
+        @include button-outline-variant($danger);
+        i {
+            @include icon(trash);
+        }
+    }
+}
+
+.custom-file {
+    .custom-file-control::after {
+        content: attr(data-file) !important;
+    }
+}
+
+a.download-document {
+    @extend .btn;
+    @include button-variant($primary, $primary);
+    i {
+        @include icon(download);
+    }
+}
+
+.delete-document-warning,
+.delete-folder-warning {
+    font-size: 1.2rem;
+    padding: 0.5rem;
+    text-align: center;
+}
+
+.pinax-documents-document-delete-container {
+    form {
+        button {
+            @include button-variant($danger, $danger);
+        }
+    }
+}
+
+.pinax-documents-folder-share-container {
+    .remove-participants {
+        ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            li {
+                padding: 0;
+                margin: 0;
+                margin-bottom: 10px;
+            }
+        }
+        button {
+            padding: 0.1rem 0.3rem;
+            line-height: 1;
+            font-size: 0.8rem;
+            @include button-outline-variant($danger);
+        }
+    }
+}
+
+.pinax-documents-folder-delete-container {
+    .form-actions {
+        button {
+            @include button-variant($danger, $danger);
+        }
+    }
+}

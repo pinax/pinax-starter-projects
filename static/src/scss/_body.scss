@@ -4,15 +4,30 @@ body {
   min-height: 100vh;
 }
 main {
+  margin-top: 20px;
   flex: 1;
-  > div {
-    @extend .container;
+  .jumbotron {
+    margin-top: -20px;
   }
+}
+#content-body {
+  @include make-container();
+  @include make-container-max-widths();
 }
 footer {
   padding: 20px 0;
   background-color: $footer-bg-color;
   > div {
-    @extend .container;
+    @include make-container();
+    @include make-container-max-widths();
+  }
+}
+
+// Right align links inside a header
+h1, h2, h3, h4 {
+  display: flex;
+  justify-content: space-between;
+  a {
+      margin-top: auto;
   }
 }
