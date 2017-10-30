@@ -1,0 +1,28 @@
+.message {
+    @extend .alert;
+    &.debug {
+        @extend .alert-secondary;
+    }
+    &.warning {
+        @extend .alert-warning;
+    }
+    &.info {
+        @extend .alert-info;
+    }
+    &.success {
+        @extend .alert-success;
+    }
+    &.error {
+        @extend .alert-danger;
+    }
+    &.extra-tag.error {
+        @extend .alert-danger;
+        font-size: 125%;
+    }
+    button {
+        cursor: pointer;
+        i {
+            @include icon(times);
+        }
+    }
+}
