@@ -7,8 +7,8 @@ def settings(request):
         "ADMIN_URL": django_settings.ADMIN_URL,
         "CONTACT_EMAIL": django_settings.CONTACT_EMAIL,
 
-        "pinax_notifications_installed": "pinax.notifications" in settings.INSTALLED_APPS,
-        "pinax_stripe_installed": "pinax.stripe" in settings.INSTALLED_APPS
+        "pinax_notifications_installed": "pinax.notifications" in django_settings.INSTALLED_APPS,
+        "pinax_stripe_installed": "pinax.stripe" in django_settings.INSTALLED_APPS
     }
 
     if Site._meta.installed:
