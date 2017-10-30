@@ -1,0 +1,106 @@
+body.pinax-stripe-subscriptions nav.settings-nav .pinax-stripe-subscriptions,
+body.pinax-stripe-invoices nav.settings-nav .pinax-stripe-invoices,
+body.pinax-stripe-payment-methods nav.settings-nav .pinax-stripe-payment-methods, {
+    color: $nav-pills-link-active-color;
+    background-color: $nav-pills-link-active-bg;
+}
+
+body.pinax-stripe {
+    section {
+        flex: 1;
+    }
+    h4 {
+        a {
+            @extend .btn;
+            @extend .btn-sm;
+            @include button-variant($primary, $primary);
+        }
+    }
+    &.pinax-stripe-subscriptions,
+    &.pinax-stripe-payment-methods {
+        h4 a i {
+            @include icon(plus);
+        }
+    }
+    a.subscription-update,
+    a.payment-method-update {
+        @extend .btn;
+        @extend .btn-sm;
+        @extend .btn-outline-primary;
+    }
+    a.subscription-cancel,
+    a.payment-method-delete {
+        @extend .btn;
+        @extend .btn-sm;
+        @extend .btn-outline-danger;
+    }
+    button.payment-method-delete {
+        @include button-variant($danger, $danger);
+    }
+    table {
+        .pinax-stripe-invoice-total,
+        .pinax-stripe-invoice-paid {
+            text-align: right;
+        }
+        .pinax-stripe-invoice-paid {
+            i {
+                color: $success;
+                @include icon(check);
+            }
+        }
+        .pinax-stripe-expiration,
+        .pinax-stripe-created {
+            text-align: right;
+        }
+    }
+    form {
+        .card-expiration {
+            @extend .form-group;
+            label {
+                font-weight: 500;
+                font-size: 1.2rem;
+                display: block;
+            }
+        }
+        .exp-month,
+        .exp-year {
+            display: inline-block;
+        }
+    }
+    input[type=text] {
+        @extend .form-control;
+    }
+}
+
+.pinax-stripe-subscriptions-cancel-container {
+    form {
+        button {
+            @include button-variant($danger, $danger);
+        }
+    }
+    .summary {
+        font-size: 1.2rem;
+        margin-bottom: 20px;
+    }
+}
+
+.StripeElement {
+    background-color: white;
+    padding: 8px 12px;
+    border-radius: 0.25rem;
+    border: 1px solid $gray-400;
+    margin-bottom: 20px;
+}
+
+.StripeElement--focus {
+    border-color: $input-focus-border-color;
+    box-shadow: 0 0 0 $input-btn-focus-width $input-btn-focus-color; // $input-focus-box-shadow;
+}
+
+.StripeElement--invalid {
+    border-color: $danger;
+}
+
+.StripeElement--webkit-autofill {
+background-color: #fefde5 !important;
+}
