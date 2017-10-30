@@ -1,0 +1,108 @@
+.blog-container {
+    .blog-content {
+        .post-list {
+            .post {
+                h2 {
+                    a {
+                        color: $gray-700;
+                    }
+                    a:hover {
+                        text-decoration: none;
+                        color: $gray-600;
+                    }
+                }
+                .post-meta {
+                    color: $gray-600;
+                    font-style: italic;
+                }
+                .teaser {
+                    @extend .lead;
+                }
+                .more {
+                    text-align: right;
+                    margin-bottom: 40px;
+                }
+            }
+        }
+        .post-detail {
+            h1, h2 {
+                color: $gray-700;
+            }
+            .post-meta {
+                color: $gray-600;
+                font-style: italic;
+                border-bottom: 2px solid $gray-200;
+                padding-bottom: 5px
+            }
+            .teaser {
+                @extend .lead;
+            }
+        }
+    }
+    .sidebar {
+        .profile-picture {
+            img {
+                width: 100%;
+            }
+            margin-bottom: 20px;
+        }
+        p.bio {
+            @extend .lead;
+        }
+        code {
+            background: inherit;
+            font-size: 0.7em;
+            padding: 0;
+        }
+        .feeds {
+            text-align: right;
+            margin: 20px 0;
+            a {
+                @extend .btn;
+                @extend .btn-sm;
+                @extend .btn-warning;
+            }
+            i.atom {
+                @include icon(rss);
+            }
+        }
+        .search {
+            margin: 20px 0;
+            form {
+                .search-input {
+                    @extend .input-group;
+                    i {
+                        @extend .input-group-addon;
+                        @include icon(search);
+                    }
+                    input {
+                        @extend .form-control;
+                    }
+                }
+            }
+        }
+        .sections-nav {
+            @extend .nav;
+            @extend .nav-pills;
+            @extend .flex-column;
+            a {
+                @extend .nav-link;
+                color: $gray-700;
+            }
+            a:hover {
+                background: $gray-200;
+            }
+            a.current-section,
+            a.current-section:hover {
+                background: $primary;  // @extend .active changes blog post teaser to have color: white;
+                color: white;
+            }
+            .heading {
+                padding: 0.5rem 1rem;
+                text-transform: uppercase;
+                color: $gray-500;
+                letter-spacing: 0.1em;
+            }
+        }
+    }
+}
