@@ -4,63 +4,100 @@ header {
     @extend .navbar-expand-lg;
     @extend .navbar-light;
     @extend .bg-light;
-    div.topbar-container {
-      @extend .container;
-      >a {
-        @extend .navbar-brand;
-      }
-      button.expand {
-        @extend .navbar-toggler;
-        i {
-          @include icon(bars);
-        }
-      }
-      .nav-container {
-        @extend .collapse;
-        @extend .navbar-collapse;
-        .main-bar {
-          @extend .navbar-nav;
-          @extend .mr-auto;
-          li {
-            @extend .nav-item;
-            a {
-              @extend .nav-link;
-            }
-          }
-        }
-        .account-bar {
-          @extend .navbar-nav;
-          li {
-            @extend .nav-item;
-            a {
-              @extend .nav-link;
-            }
-          }
-          .user {
-            @extend .navbar-text;
-            padding-left: 0.5rem;
-            padding-right: 0.5rem;
-            i {
-              @include icon(user);
-            }
-          }
-          .settings {
-            i {
-              @include icon(cog);
-            }
-          }
-          .logout {
-            i {
-              @include icon(power-off);
-            }
-          }
-          .login {
-            i {
-              @include icon(power-off);
-            }
-          }
-        }
+  }
+}
+
+div.topbar-container {
+  display: flex;
+  @include make-container();
+  @include make-container-max-widths();
+  form {
+    margin-top: 0px !important;
+  }
+  > a {
+    @extend .navbar-brand;
+  }
+  button.expand {
+    @extend .navbar-toggler;
+    i {
+      @include icon(bars);
+    }
+  }
+}
+
+.nav-container {
+  @extend .collapse;
+  @extend .navbar-collapse;
+}
+
+.main-bar {
+  @extend .navbar-nav;
+  margin-right: auto !important;
+  li {
+    @extend .nav-item;
+    a {
+      @extend .nav-link;
+    }
+    .dropdown-menu {
+      a {
+        @extend .dropdown-item;
       }
     }
+  }
+}
+
+
+
+.account-bar {
+  @extend .navbar-nav;
+  li {
+    @extend .nav-item;
+    a {
+      @extend .nav-link;
+    }
+  }
+  .user {
+    @extend .navbar-text;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    i {
+      @include icon(user);
+    }
+  }
+  .settings {
+    i {
+      @include icon(cog);
+    }
+  }
+  .logout {
+    i {
+      @include icon(power-off);
+    }
+  }
+  .login {
+    i {
+      @include icon(power-off);
+    }
+  }
+}
+
+nav.page-navigation {
+  ul {
+    @extend .pagination;
+    @extend .justify-content-center;
+    li {
+      @extend .page-item;
+      a {
+        @extend .page-link;
+      }
+    }
+  }
+  .prev i {
+    @include icon(long-arrow-left);
+    margin-right: 10px;
+  }
+  .next i {
+    @include icon(long-arrow-right);
+    margin-left: 10px;
   }
 }
