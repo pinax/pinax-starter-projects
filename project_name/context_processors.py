@@ -4,8 +4,8 @@ from django.conf import settings as django_settings
 
 def settings(request):
     ctx = {
-        "THEME_ADMIN_URL": django_settings.THEME_ADMIN_URL,
-        "THEME_CONTACT_EMAIL": django_settings.THEME_CONTACT_EMAIL,
+        "ADMIN_URL": django_settings.ADMIN_URL,
+        "CONTACT_EMAIL": django_settings.CONTACT_EMAIL,
     }
 
     if Site._meta.installed:
