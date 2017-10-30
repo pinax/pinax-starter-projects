@@ -1,0 +1,9 @@
+.pinax-invitations-invites-remaining {
+    @extend .badge;
+    &.has-remaining {
+        @extend .badge-info;
+    }
+    &.no-remaining {
+        @extend .badge-danger;
+    }
+}
