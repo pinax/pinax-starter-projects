@@ -1,0 +1,44 @@
+body.account.notices {
+    nav.settings-nav .notice-settings {
+        color: $nav-pills-link-active-color;
+        background-color: $nav-pills-link-active-bg;
+    }
+    @media (min-width: 576px) {  // @include media-breakpoint-up(xs) { ... } seems to be ignored
+        .subnav-container {
+            section {
+                margin-left: 20px;
+                form {
+                    margin-top: 0;
+                    width: 750px;
+                }
+            }
+        }
+    }
+
+    table.notice-settings {
+        @extend .table;
+        @extend .table-bordered;
+        background: $white;
+        tr:first-child {
+            background: $gray-400;
+            color: $gray-800;
+        }
+        .notice-type-description {
+            color: $gray-700;
+            font-weight: 300;
+            font-size: 0.9em;
+        }
+        td.setting {
+            text-align: center;
+            vertical-align: middle;
+        }
+        th.setting-header {
+            text-align: center;
+        }
+    }
+
+    .form-actions {
+        text-align: right;
+    }
+}
+

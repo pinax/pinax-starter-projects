@@ -1,0 +1,44 @@
+.icon-not-liked {
+    @include icon(thumbs-o-up);
+}
+.icon-liked {
+    @include icon(thumbs-up);
+}
+
+.like-link {
+    @extend .btn;
+    @extend .btn-sm;
+
+    &.liked {
+        @extend .btn-primary;
+        &::after {
+            content: "Liked";
+        }
+        i {
+            @include icon(thumbs-up);
+        }
+    }
+    &.not-liked {
+        @extend .btn-outline-primary;
+        &::after {
+            content: "Like";
+        }
+        i {
+            @include icon(thumbs-o-up);
+        }
+    }
+}
+
+.count-label {
+    display: inline-block;
+    margin-left: 10px;
+    font-size: 0.8rem;
+    padding: 0.3rem 0.6rem;
+    color: $gray-700;
+    .count {
+        border-radius: 15px;
+        padding: 5px;
+        background: $info;
+        color: $gray-200;
+    }
+}
