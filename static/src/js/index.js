@@ -3,12 +3,12 @@ window.jQuery = window.$ = require('jquery');
 
 const $ = window.$;
 
-window.Popper = require('popper.js');
-require('bootstrap');
-
-const Card = require('./card');
+require('bootstrap/dist/js/bootstrap.bundle');
 
 import ajaxSendMethod from './ajax';
+import handleMessageDismiss from './messages';
+import loadStripeElements from './pinax-stripe';
+import hookupCustomFileWidget from './pinax-documents';
 
 $(() => {
     $(document).ajaxSend(ajaxSendMethod);
@@ -27,16 +27,19 @@ $(() => {
         $('#accountLogOutForm').submit();
     });
 
-    if ($('form.with-card').length === 1) {
-        window.card = new Card({
-            form: 'form.with-card',
-            container: '.card-wrapper',
-            formSelectors: {
-                numberInput: 'input[data-stripe="number"]',
-                expiryInput: 'input.card-exp-month, input.card-exp-year',
-                cvcInput: 'input.card-cvc'
-            },
-            debug: true
-        });
-    }
+    $('[data-show-menu]').click(e => {
+        if ($('body').hasClass('show-menu')) {
+            $($(e.currentTarget).data('show')).collapse('toggle');
+        } else {
+            $('body').toggleClass('show-menu');
+            $($(e.currentTarget).data('show')).collapse('show');
+        }
+    });
+    $('.btn-menu-toggle').click(() => {
+        $('body').toggleClass('show-menu');
+    });
+
+    handleMessageDismiss();
+    loadStripeElements();
+    hookupCustomFileWidget();
 });

@@ -1,0 +1,177 @@
+body.pinax-cohorts {
+    .cohort-list-container {
+        h2 {
+            display: flex;
+            justify-content: space-between;
+            a {
+                @extend .btn;
+                @extend .btn-sm;
+                @extend .btn-outline-primary;
+                i {
+                    @include icon(plus);
+                }
+                margin-top: auto;
+            }
+            border-bottom: 1px solid #EEE;
+            padding-bottom: 5px;
+            margin-bottom: 20px;
+        }
+    }
+    .cohort-list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        .cohort {
+            flex-basis: 340px;
+            margin-bottom: 40px;
+            @extend .card;
+            h3 {
+                @extend .card-header;
+                font-size: 1.2em;
+                display: flex;
+                justify-content: space-between;
+                .totals {
+                    font-weight: 300;
+                    font-size: 0.8em;
+                    margin-top: 4px;
+                    .users::after {
+                        content: " / "
+                    }
+                }
+            }
+            ul {
+                @include list-unstyled;
+                @extend .list-group-flush;
+                li {
+                    display: flex;
+                    justify-content: space-between;
+                    @extend .list-group-item;
+                }
+            }
+        }
+    }
+}
+
+body.pinax-cohorts {
+    .cohort-detail-container {
+        @include make-row();
+        table {
+            @extend .table-sm;
+        }
+    }
+    .cohort-detail {
+        @include make-col-ready();
+        @extend .col-9;
+    }
+    .cohort-actions-container {
+        @include make-col-ready();
+        @extend .col-3;
+    }
+
+    .cohort-invite-add-container {
+        margin-top: 20px;
+        input[name=invite_next] {
+            width: 70px;
+            margin: 0px 10px;
+        }
+        button {
+            @extend .btn-sm;
+            margin-left: 20px;
+            i {
+                @include icon(plus);
+            }
+            @extend .btn-outline-primary;
+        }
+    }
+
+    .meta {
+        display: flex;
+        justify-content: space-between;
+        color: $gray-600;
+        font-size: 0.9rem;
+    }
+
+    .cohort-invite-add-container {
+        form {
+            input,
+            button {
+                margin: 0;
+                display: inline-block;
+            }
+            button {
+                margin-left: 2px;
+            }
+        }
+    }
+
+    .pending-invites-container {
+        margin: 20px 0;
+        button {
+            display: block;
+            width: 100%;
+        }
+    }
+
+    .pending-invites-list-container {
+        @extend .list-group;
+        .waiting-list-item {
+            @extend .list-group-item;
+            padding: 0.25rem 0.75rem;
+            .invitee {
+                font-weight: 600;
+            }
+            .entry-created {
+                font-size: 0.8rem;
+                color: $gray-800;
+                line-height: 2;
+                font-weight: 300;
+            }
+            .invitee-add-form {
+                display: flex;
+                justify-content: space-between;
+                button {
+                    padding: 0.1rem 0.25rem;
+                    font-size: 0.75rem;
+                    line-height: .9;
+                    border-radius: 0.2rem;
+                    margin-bottom: 1px;
+                }
+                i {
+                    @include icon(plus);
+                }
+            }
+        }
+    }
+}
+
+body.pinax-cohorts {
+    .member-user,
+    .member-invited,
+    .member-pending {
+        display: inline-block;
+        border: 1px solid #EEE;
+        padding: 2px 5px;
+        font-size: 0.8em;
+        border-radius: 4px;
+        color: white;
+        white-space: nowrap;
+    }
+    .member-user {
+        background-color: $success;
+        border-color: lighten($success, 10%);
+        i {
+            @include icon(user);
+        }
+        color: lighten($success, 50%);
+    }
+    .member-invited {
+        background-color: lighten($success, 50%);
+        border-color: lighten($success, 20%);
+        color: $success;
+    }
+    .member-pending {
+        background-color: $light;
+        border-color: darken($light, 20%);
+        color: $dark;
+    }
+}
