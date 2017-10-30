@@ -91,8 +91,8 @@ body.account {
         }
         @media (min-width: 576px) {  // @include media-breakpoint-up(xs) { ... } seems to be ignored
             form {
-                margin-top: 100px;
                 width: 300px;
+                margin: 80px auto;
             }
         }
     }
