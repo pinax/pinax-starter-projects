@@ -1,0 +1,99 @@
+body.pinax-messages {
+
+}
+
+.pinax-messages-inbox-container {
+    h2 {
+        a {
+            @extend .btn;
+            @extend .btn-sm;
+            @include button-variant($primary, $primary);
+            i {
+                @include icon(envelope);
+            }
+        }
+    }
+    .no-messages {
+        font-size: 1.2rem;
+        padding: 0.5rem;
+        background: $gray-100;
+        border: 1px solid $gray-200;
+        color: $gray-600;
+        border-radius: 5px;
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    section.mailbox {
+        .thread {
+            a {
+                border: 1px solid $gray-200;
+                background: $gray-100;
+                border-radius: 5px;
+                margin-bottom: 20px;
+                text-decoration: none;
+                display: flex;
+                padding: 0.5rem;
+                color: $gray-900;
+                transition: box-shadow 150ms ease;
+                &:hover {
+                    background: theme-color-level("primary", -12);
+                    border-color: theme-color-level("primary", -10);
+                    color: theme-color-level("primary", 0);
+                    box-shadow: 0 7px 14px 0 rgba($primary,.1), 0 3px 6px 0 rgba(0,0,0,.07);
+                    .latest-message {
+                        .content {
+                            color: theme-color-level("primary", -5);
+                        }
+                    }
+                }
+                .participants {
+                    flex: 1;
+                }
+                .latest-message {
+                    flex: 4;
+                    .subject {
+                        font-size: 1.2rem;
+                    }
+                    .content {
+                        color: $gray-600;
+                        margin-bottom: 0;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.pinax-messages-thread-detail-container {
+    h2 {
+        a {
+            @extend .btn;
+            @extend .btn-sm;
+            @include button-outline-variant($danger);
+        }
+        border-bottom: 1px solid $gray-200;
+        padding-bottom: 5px;
+    }
+    .message-byline {
+        font-weight: 600;
+    }
+    .message-content {
+        font-size: 1.2rem;
+        font-weight: 300;
+        margin-top: 20px;
+    }
+}
+
+.pinax-messages-delete-container {
+    .delete-warning {
+        font-size: 1.2rem;
+        padding: 1rem;
+        text-align: center;
+    }
+    form {
+        button {
+            @include button-variant($danger, $danger);
+        }
+    }
+}

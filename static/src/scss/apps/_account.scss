@@ -1,0 +1,99 @@
+body.account {
+    &.account-settings nav.settings-nav  .account-settings,
+    &.account-password nav.settings-nav .account-password,
+    &.account-delete nav.settings-nav .account-delete {
+        color: $nav-pills-link-active-color;
+        background-color: $nav-pills-link-active-bg;
+    }
+    .subnav-container {
+      @extend .d-sm-flex;
+    }
+    .settings-nav {
+        @extend .nav;
+        @extend .flex-column;
+        @extend .nav-pills;
+        .heading {
+            padding: 0.5rem 1rem;
+            text-transform: uppercase;
+            color: $gray-500;
+            letter-spacing: 0.1em;
+        }
+        a {
+            @extend .nav-link;
+            color: $gray-700;
+        }
+        a:hover {
+            background: $gray-200;
+        }
+    }
+    section {
+        form {
+            width: 100%;
+        }
+    }
+    @media (min-width: 576px) {  // @include media-breakpoint-up(xs) { ... } seems to be ignored
+        .subnav-container {
+            section {
+                margin-left: 20px;
+                form {
+                    margin-top: 0;
+                    width: 400px;
+                }
+            }
+        }
+    }
+}
+
+body.account-delete {
+    form {
+        button {
+            @include button-variant($red, $red);
+        }
+    }
+}
+
+body.account {
+    &.account-login,
+    &.account-logout,
+    &.account-signup,
+    &.account-password-reset,
+    &.account-email-confirmation {
+        #content_body {
+            @extend .d-flex;
+            @extend .justify-content-center;
+        }
+        form {
+            margin-top: 0px;
+            width: 100%;
+            a.forgot-password {
+                display: block;
+                margin: 5px 0;
+                font-size: 90%;
+            }
+            p.login-signup {
+                margin-top: 15px;
+                background-color: $gray-100;
+                padding: 10px 15px;
+                border-radius: 5px;
+                border: 1px solid $gray-200;
+                color: $gray-700;
+                text-align: center;
+            }
+            .has-error {
+                .help-block {
+                    color: $red;
+                }
+            }
+            p.help-text {
+                margin-top: 35px;
+                font-size: 80%;
+            }
+        }
+        @media (min-width: 576px) {  // @include media-breakpoint-up(xs) { ... } seems to be ignored
+            form {
+                margin-top: 100px;
+                width: 300px;
+            }
+        }
+    }
+}
