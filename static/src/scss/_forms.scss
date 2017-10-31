@@ -10,14 +10,6 @@ form {
     }
     .form-actions {
         text-align: right;
-        .cancel {
-            @extend .btn;
-            @include button-variant($gray-100, $gray-100);
-        }
-        .delete {
-            @extend .btn;
-            @include button-variant($danger, $danger);
-        }
     }
     button {
         @include button-variant($primary, $primary);
@@ -27,4 +19,16 @@ form {
 button {
     cursor: pointer;
     @extend .btn;
+}
+
+a.cancel {
+    cursor: pointer;
+    @extend .btn;
+    @include button-variant($gray-100, $gray-100);
+}
+
+a.delete {
+    cursor: pointer;
+    @extend .btn;
+    @include button-variant($danger, $danger);
 }

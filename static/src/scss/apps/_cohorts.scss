@@ -4,13 +4,10 @@ body.pinax-cohorts {
             display: flex;
             justify-content: space-between;
             a {
-                @extend .btn;
-                @extend .btn-sm;
-                @extend .btn-outline-primary;
+                @include button-outline-variant($primary);
                 i {
                     @include icon(plus);
                 }
-                margin-top: auto;
             }
             border-bottom: 1px solid #EEE;
             padding-bottom: 5px;
@@ -40,7 +37,7 @@ body.pinax-cohorts {
                 }
             }
             ul {
-                @include list-unstyled;
+                @include list-unstyled();
                 @extend .list-group-flush;
                 li {
                     display: flex;
@@ -80,7 +77,7 @@ body.pinax-cohorts {
             i {
                 @include icon(plus);
             }
-            @extend .btn-outline-primary;
+            @include button-outline-variant($primary);
         }
     }
 
