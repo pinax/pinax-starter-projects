@@ -11,8 +11,6 @@ body.pinax-stripe {
     }
     h4 {
         a {
-            @extend .btn;
-            @extend .btn-sm;
             @include button-variant($primary, $primary);
         }
     }
@@ -26,13 +24,13 @@ body.pinax-stripe {
     a.payment-method-update {
         @extend .btn;
         @extend .btn-sm;
-        @extend .btn-outline-primary;
+        @include button-outline-variant($primary);
     }
     a.subscription-cancel,
     a.payment-method-delete {
         @extend .btn;
         @extend .btn-sm;
-        @extend .btn-outline-danger;
+        @include button-outline-variant($danger);
     }
     button.payment-method-delete {
         @include button-variant($danger, $danger);
@@ -102,5 +100,5 @@ body.pinax-stripe {
 }
 
 .StripeElement--webkit-autofill {
-background-color: #fefde5 !important;
+    background-color: #fefde5 !important;
 }
