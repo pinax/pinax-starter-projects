@@ -10,7 +10,7 @@
     @extend .btn-sm;
 
     &.liked {
-        @extend .btn-primary;
+        @include button-variant($primary, $primary);
         &::after {
             content: "Liked";
         }
@@ -19,7 +19,7 @@
         }
     }
     &.not-liked {
-        @extend .btn-outline-primary;
+        @include button-outline-variant($primary);
         &::after {
             content: "Like";
         }
