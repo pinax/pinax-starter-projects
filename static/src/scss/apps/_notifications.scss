@@ -16,7 +16,6 @@ body.account.notices {
     }
 
     table.notice-settings {
-        @extend .table;
         @extend .table-bordered;
         background: $white;
         tr:first-child {
