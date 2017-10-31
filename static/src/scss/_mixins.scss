@@ -1,6 +1,5 @@
 @mixin icon($icon, $font-size: inherit) {
-  @include fa-icon;
-  @extend .fa;
+  @include fa-icon();
   @extend .fa-#{$icon};
   font-size: $font-size;
 }
