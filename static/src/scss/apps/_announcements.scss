@@ -1,24 +1,12 @@
 body.announcements {
     h2 {
         a {
-            @extend .btn;
-            @extend .btn-sm;
             @include button-variant($primary, $primary);
         }
     }
     .announcement {
         @extend .card;
         margin: 20px 0;
-        a.announcement-edit-link {
-            @extend .btn;
-            @include button-outline-variant($primary);
-            padding: 0.25rem 0.5rem;
-            font-size: 0.8rem;
-            line-height: 1;
-            i {
-                @include icon(pencil);
-            }
-        }
         .announcement-body {
             font-weight: 300;
             @extend .card-body;
@@ -37,6 +25,17 @@ body.announcements {
             margin: 0 auto;
             width: 600px;
         }
+    }
+}
+
+a.announcement-edit-link {
+    @extend .btn;
+    @include button-outline-variant($primary);
+    padding: 0.25rem 0.5rem;
+    font-size: 0.8rem;
+    line-height: 1;
+    i {
+        @include icon(pencil);
     }
 }
 

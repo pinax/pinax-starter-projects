@@ -58,7 +58,7 @@ body.account {
     &.account-signup,
     &.account-password-reset,
     &.account-email-confirmation {
-        #content_body {
+        #content-body {
             @extend .d-flex;
             @extend .justify-content-center;
         }
@@ -91,8 +91,8 @@ body.account {
         }
         @media (min-width: 576px) {  // @include media-breakpoint-up(xs) { ... } seems to be ignored
             form {
+                margin-top: 60px;
                 width: 300px;
-                margin: 80px auto;
             }
         }
     }
