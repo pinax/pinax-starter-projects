@@ -37,6 +37,22 @@
             .teaser {
                 @extend .lead;
             }
+            img {
+                width: 100%;
+            }
+            figure {
+                margin: 20px auto;
+                img {
+                    border-radius: 5px;
+                    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.6);
+                }
+                figcaption {
+                    text-align: center;
+                    font-size: 0.7rem;
+                    color: $gray-600;
+                    margin-top: 7px;
+                }
+            }
         }
     }
     .sidebar {
