@@ -134,10 +134,23 @@ INSTALLED_APPS = [
 
     # external
     "pinax.blog",
+    "pinax.images",
+    "pinax.webanalytics",
 
     # project
     "{{ project_name }}",
 ]
+
+# Grab your own GA id and replace UA-XXXXXXXX or use another
+# pinax-webanalytics provider, or roll your own template.
+# PINAX_WEBANALYTICS_SETTINGS = {
+#     "google": {
+#         2: "UA-XXXXXXXX",
+#     }
+# }
+
+# Turn off the admin js; probably should remove from the form
+PINAX_BLOG_ADMIN_JS = []
 
 ADMIN_URL = "admin:index"
 CONTACT_EMAIL = "support@example.com"

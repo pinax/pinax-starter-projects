@@ -1,6 +1,7 @@
 {% extends "base.html" %}
 
 {% load staticfiles %}
+{% load pinax_webanalytics_tags %}
 {% load i18n %}
 
 
@@ -33,4 +34,5 @@
 
 {% block extra_body_base %}
     {% block extra_body %}{% endblock %}
+    {% analytics %}
 {% endblock %}
