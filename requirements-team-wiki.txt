@@ -1,0 +1,4 @@
+Pillow==2.9.0
+easy-thumbnails==2.2
+pinax-teams==0.12.1
+django-reversion==1.10.2
