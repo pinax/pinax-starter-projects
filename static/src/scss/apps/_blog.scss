@@ -5,6 +5,11 @@
                 h2 {
                     a {
                         color: $gray-700;
+                        margin-top: inherit;
+                        padding: inherit;
+                        font-size: inherit;
+                        line-height: inherit;
+                        border-radius: inherit;
                     }
                     a:hover {
                         text-decoration: none;
