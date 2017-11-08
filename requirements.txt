@@ -1,5 +1,2 @@
-pinax-waitinglist==1.3.0
-pinax-webanalytics==2.0.4
-
-Django==1.11.6
-pinax-templates==0.2
+-r requirements-zero.txt
+-r requirements-waitinglist.txt
