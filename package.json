@@ -37,7 +37,7 @@
     "cssnano": "3.10.0",
     "cssnano-cli": "1.0.5",
     "envify": "4.1.0",
-    "eslint": "4.10.0",
+    "eslint": "4.11.0",
     "eslint-plugin-babel": "4.1.2",
     "exorcist": "1.0.0",
     "font-awesome": "4.7.0",
@@ -45,9 +45,9 @@
     "jsdom": "11.3.0",
     "jsdom-global": "3.0.2",
     "mocha": "4.0.1",
-    "node-sass": "4.5.3",
+    "node-sass": "4.7.1",
     "onchange": "3.2.1",
-    "uglify-js": "3.1.6",
+    "uglify-js": "3.1.10",
     "watchify": "3.9.0"
   }
 }
