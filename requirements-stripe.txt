@@ -1,1 +1,1 @@
-pinax-stripe==3.3.0
+pinax-stripe==4.0.0
