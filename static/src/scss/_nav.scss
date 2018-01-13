@@ -19,9 +19,6 @@ div.topbar-container {
   }
   button.expand {
     @extend .navbar-toggler;
-    i {
-      @include icon(bars);
-    }
   }
 }
 
@@ -60,24 +57,6 @@ div.topbar-container {
     @extend .navbar-text;
     padding-left: 0.5rem;
     padding-right: 0.5rem;
-    i {
-      @include icon(user);
-    }
-  }
-  .settings {
-    i {
-      @include icon(cog);
-    }
-  }
-  .logout {
-    i {
-      @include icon(power-off);
-    }
-  }
-  .login {
-    i {
-      @include icon(power-off);
-    }
   }
 }
 
@@ -93,11 +72,9 @@ nav.page-navigation {
     }
   }
   .prev i {
-    @include icon(long-arrow-left);
     margin-right: 10px;
   }
   .next i {
-    @include icon(long-arrow-right);
     margin-left: 10px;
   }
 }
