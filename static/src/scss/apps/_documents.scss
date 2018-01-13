@@ -50,26 +50,8 @@
             @extend .btn;
             @extend .btn-sm;
             @include button-outline-variant($primary);
-            &.action-folder-create {
-                i {
-                    @include icon(plus);
-                }
-            }
-            &.action-document-create {
-                i {
-                    @include icon(upload);
-                }
-            }
-            &.action-folder-share {
-                i {
-                    @include icon(share);
-                }
-            }
             &.action-folder-delete {
                 @include button-outline-variant($danger);
-                i {
-                    @include icon(trash);
-                }
             }
         }
     }
@@ -82,17 +64,6 @@
         @extend .badge-info;
     }
 
-    .member-name {
-        i.file {
-            @extend .fa-fw;
-            @include icon(file-o);
-        }
-        i.folder-open {
-            @extend .fa-fw;
-            @include icon(folder-open-o);
-        }
-    }
-
     .member-actions-download,
     .member-actions-upload,
     .member-actions-share,
@@ -102,26 +73,8 @@
         padding: 0.1rem 0.5rem;
         @include button-outline-variant($primary);
     }
-    .member-actions-download {
-        i {
-            @include icon(plus);
-        }
-    }
-    .member-actions-upload {
-        i {
-            @include icon(upload);
-        }
-    }
-    .member-actions-share {
-        i {
-            @include icon(share);
-        }
-    }
     .member-actions-delete {
         @include button-outline-variant($danger);
-        i {
-            @include icon(trash);
-        }
     }
 }
 
@@ -134,9 +87,6 @@
 a.download-document {
     @extend .btn;
     @include button-variant($primary, $primary);
-    i {
-        @include icon(download);
-    }
 }
 
 .delete-document-warning,
