@@ -26,6 +26,12 @@ body.announcements {
             width: 600px;
         }
     }
+    button.delete {
+        @include button-variant($danger, $danger);
+    }
+    form {
+        padding-bottom: 20px;
+    }
 }
 
 a.announcement-edit-link {
@@ -34,9 +40,6 @@ a.announcement-edit-link {
     padding: 0.25rem 0.5rem;
     font-size: 0.8rem;
     line-height: 1;
-    i {
-        @include icon(pencil);
-    }
 }
 
 div.announcement-container {
