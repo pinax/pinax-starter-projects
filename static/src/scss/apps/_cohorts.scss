@@ -5,9 +5,6 @@ body.pinax-cohorts {
             justify-content: space-between;
             a {
                 @include button-outline-variant($primary);
-                i {
-                    @include icon(plus);
-                }
             }
             border-bottom: 1px solid #EEE;
             padding-bottom: 5px;
@@ -74,9 +71,6 @@ body.pinax-cohorts {
         button {
             @extend .btn-sm;
             margin-left: 20px;
-            i {
-                @include icon(plus);
-            }
             @include button-outline-variant($primary);
         }
     }
@@ -133,9 +127,6 @@ body.pinax-cohorts {
                     border-radius: 0.2rem;
                     margin-bottom: 1px;
                 }
-                i {
-                    @include icon(plus);
-                }
             }
         }
     }
@@ -156,9 +147,6 @@ body.pinax-cohorts {
     .member-user {
         background-color: $success;
         border-color: lighten($success, 10%);
-        i {
-            @include icon(user);
-        }
         color: lighten($success, 50%);
     }
     .member-invited {
