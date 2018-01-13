@@ -14,12 +14,6 @@ body.pinax-stripe {
             @include button-variant($primary, $primary);
         }
     }
-    &.pinax-stripe-subscriptions,
-    &.pinax-stripe-payment-methods {
-        h4 a i {
-            @include icon(plus);
-        }
-    }
     a.subscription-update,
     a.payment-method-update {
         @extend .btn;
@@ -43,7 +37,6 @@ body.pinax-stripe {
         .pinax-stripe-invoice-paid {
             i {
                 color: $success;
-                @include icon(check);
             }
         }
         .pinax-stripe-expiration,
