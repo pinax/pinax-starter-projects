@@ -1,2 +1,2 @@
 pinax-events==2.0.2
-pinax-news==2.0.0
+pinax-news==2.0.2
