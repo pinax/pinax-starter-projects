@@ -11,15 +11,16 @@
     <section class="jumbotron">
         <div class="container">
             {% include "_messages.html" %}
-            <h1>{% blocktrans %}Welcome to<br>pinax-project-account{% endblocktrans %}</h1>
-            <p>
+            <h1>{% blocktrans %}Welcome to<div style="font-size: 6rem; font-weight: 600;">Project Account</div>{% endblocktrans %}</h1>
+            <p class="lead">
                 {% blocktrans %}
-                In addition to what is provided by the "zero" project, this project
+                In addition to what is provided by Project Zero, this project
                 provides thorough integration with django-user-accounts, adding
                 comprehensive account management functionality. It is a foundation
                 suitable for most sites that have user accounts.
                 {% endblocktrans %}
             </p>
+            <img src="http://pinaxproject.com/pinax-design/tessellations/Project%20Account.png" />
             {% if not user.is_authenticated %}
             {% url "account_login" as login_url %}
             {% url "account_signup" as signup_url %}
@@ -38,6 +39,7 @@
                 focus on what makes your site different.
                 {% endblocktrans %}
             </p>
+
             <div class="feature-columns row">
                 <div class="col">
                     <div class="icon"><i class="fa fa-cubes fa-3x"></i></div>
