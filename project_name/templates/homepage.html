@@ -13,14 +13,15 @@
     <section class="jumbotron">
         <div class="container">
             {% include "_messages.html" %}
-            <h1>{% blocktrans %}Welcome to<br>pinax-project-company{% endblocktrans %}</h1>
-            <p>
+            <h1>{% blocktrans %}Welcome to<div style="font-size: 6rem; font-weight: 600;">Project Company</div>{% endblocktrans %}</h1>
+            <p class="lead">
                 {% blocktrans %}
-                This project lays the foundation for all other Pinax starter projects.
-                It provides the project directory layout on which the other starter
-                projects are based.
+                In addition to what Project Blog provides, this adds in features
+                suitable for setting up a site for your company with the integration
+                of pinax-events and pinax-news.
                 {% endblocktrans %}
             </p>
+            <img src="http://pinaxproject.com/pinax-design/tessellations/Project%20Company.png" />
         </div>
     </section>
     <section id="content-section">
@@ -34,6 +35,7 @@
                 focus on what makes your site different.
                 {% endblocktrans %}
             </p>
+
             <div class="feature-columns row">
                 <div class="col">
                     <div class="icon"><i class="fa fa-cubes fa-3x"></i></div>
