@@ -5,7 +5,7 @@ from django.conf.urls.static import static
 from django.contrib import admin
 
 urlpatterns = [
-    path("admin/", include(admin.site.urls)),
+    path("admin/", admin.site.urls),
     path("", include("pinax.blog.urls", namespace="pinax_blog")),
 ]
 
