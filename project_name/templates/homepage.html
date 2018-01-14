@@ -2,7 +2,7 @@
 
 {% load i18n %}
 
-{% block head_title %}pinax-project-zero{% endblock %}
+{% block head_title %}pinax-project-blog{% endblock %}
 
 {% block body_class %}home{% endblock %}
 
@@ -11,14 +11,14 @@
     <section class="jumbotron">
         <div class="container">
             {% include "_messages.html" %}
-            <h1>{% blocktrans %}Welcome to<br>pinax-project-zero{% endblocktrans %}</h1>
-            <p>
+            <h1>{% blocktrans %}Welcome to<div style="font-size: 6rem; font-weight: 600;">Project Blog</div>{% endblocktrans %}</h1>
+            <p class="lead">
                 {% blocktrans %}
-                This project lays the foundation for all other Pinax starter projects.
-                It provides the project directory layout on which the other starter
-                projects are based.
+                In addition to what Project Zero provides, this integrates pinax-blog
+                and pinax-webanalytics to provide site with a blog.
                 {% endblocktrans %}
             </p>
+            <img src="http://pinaxproject.com/pinax-design/tessellations/Project%20Blog.png" />
         </div>
     </section>
     <section id="content-section">
@@ -32,6 +32,7 @@
                 focus on what makes your site different.
                 {% endblocktrans %}
             </p>
+
             <div class="feature-columns row">
                 <div class="col">
                     <div class="icon"><i class="fa fa-cubes fa-3x"></i></div>

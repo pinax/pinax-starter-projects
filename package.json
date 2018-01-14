@@ -46,7 +46,7 @@
     "mocha": "4.1.0",
     "node-sass": "4.7.2",
     "onchange": "3.3.0",
-    "uglify-js": "3.3.5",
+    "uglify-js": "3.3.7",
     "watchify": "3.9.0"
   }
 }
