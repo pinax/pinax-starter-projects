@@ -10,7 +10,7 @@ from .profiles.views import ProfileDetailView, ProfileEditView, ProfileListView
 
 urlpatterns = [
     path("", homepage, name="home"),
-    path("admin/", include(admin.site.urls)),
+    path("admin/", admin.site.urls),
     path("account/", include("account.urls")),
     path("invites/", include("kaleo.urls")),
 
