@@ -11,14 +11,19 @@
     <section class="jumbotron">
         <div class="container">
             {% include "_messages.html" %}
-            <h1>{% blocktrans %}Welcome to<br>pinax-project-zero{% endblocktrans %}</h1>
-            <p>
+            <h1>{% blocktrans %}Welcome to<div style="font-size: 6rem; font-weight: 600;">Project Zero</div>{% endblocktrans %}</h1>
+            <p class="lead">
                 {% blocktrans %}
                 This project lays the foundation for all other Pinax starter projects.
+                {% endblocktrans %}
+            </p>
+            <p class="lead">
+                {% blocktrans %}
                 It provides the project directory layout on which the other starter
                 projects are based.
                 {% endblocktrans %}
             </p>
+            <img src="http://pinaxproject.com/pinax-design/tessellations/Project%20Zero.png" />
         </div>
     </section>
     <section id="content-section">
@@ -32,6 +37,7 @@
                 focus on what makes your site different.
                 {% endblocktrans %}
             </p>
+
             <div class="feature-columns row">
                 <div class="col">
                     <div class="icon"><i class="fa fa-cubes fa-3x"></i></div>

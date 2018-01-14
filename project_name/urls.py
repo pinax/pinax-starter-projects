@@ -1,6 +1,6 @@
-from django.conf.urls import url
+from django.urls import path
 
 
 urlpatterns = [
-    url(r"^(.*)$", "{{ project_name }}.views.static_view"),
+    path("<str:path>", "{{ project_name }}.views.static_view"),
 ]
