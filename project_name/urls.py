@@ -9,8 +9,8 @@ from .views import home
 
 
 urlpatterns = [
-    path("", home, name="home"),
-    path("admin/", include(admin.site.urls)),
+    path("", TemplateView.as_view(template_name="homepage.html"), name="home"),
+    path("admin/", admin.site.urls),
     path("account/", include("account.urls")),
     path("documents/", include("pinax.documents.urls", namespace="pinax_documents")),
 
