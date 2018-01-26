@@ -7,6 +7,7 @@ require('bootstrap/dist/js/bootstrap.bundle');
 
 import ajaxSendMethod from './ajax';
 import handleMessageDismiss from './messages';
+import loadStripeElements from './apps/pinax-stripe';
 
 $(() => {
     $(document).ajaxSend(ajaxSendMethod);
@@ -26,4 +27,5 @@ $(() => {
     });
 
     handleMessageDismiss();
+    loadStripeElements();
 });
