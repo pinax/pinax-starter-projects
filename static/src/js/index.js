@@ -7,8 +7,6 @@ require('bootstrap/dist/js/bootstrap.bundle');
 
 import ajaxSendMethod from './ajax';
 import handleMessageDismiss from './messages';
-import loadStripeElements from './pinax-stripe';
-import hookupCustomFileWidget from './pinax-documents';
 
 $(() => {
     $('#id_participants').chosen();
@@ -29,6 +27,4 @@ $(() => {
     });
 
     handleMessageDismiss();
-    loadStripeElements();
-    hookupCustomFileWidget();
 });
