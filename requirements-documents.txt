@@ -1,1 +1,1 @@
-pinax-documents==1.0.0
+pinax-documents==1.0.1
