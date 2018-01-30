@@ -1,2 +1,2 @@
-pinax-waitinglist==2.0.1
-pinax-webanalytics==4.0.1
+pinax-waitinglist==2.0.3
+pinax-webanalytics==4.0.2
