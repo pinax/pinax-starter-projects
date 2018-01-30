@@ -41,12 +41,12 @@
     "eslint-plugin-babel": "4.1.2",
     "exorcist": "1.0.0",
     "jquery": "3.3.1",
-    "jsdom": "11.6.1",
+    "jsdom": "11.6.2",
     "jsdom-global": "3.0.2",
     "mocha": "5.0.0",
     "node-sass": "4.7.2",
     "onchange": "3.3.0",
-    "uglify-js": "3.3.8",
-    "watchify": "3.9.0"
+    "uglify-js": "3.3.9",
+    "watchify": "3.10.0"
   }
 }
