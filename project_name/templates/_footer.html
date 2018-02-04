@@ -5,3 +5,12 @@
 {% blocktrans %}
 <div class="copyright">&copy; {{ current_year }} &lt;your company here&gt;</div>
 {% endblocktrans %}
+
+<div class="made-with-pinax">
+    Made with Pinax
+    <div class="patches">
+        {% for app in pinax_apps %}
+            <img src="http://pinax.github.com/pinax-design/patches/{{ app }}.svg" />
+        {% endfor %}
+    </div>
+</div>
