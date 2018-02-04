@@ -20,6 +20,19 @@ footer {
   > div {
     @include make-container();
     @include make-container-max-widths();
+    display: flex;
+    justify-content: space-between;
+    .made-with-pinax {
+      text-align: right;
+      color: $gray-600;
+    }
+    .patches {
+        margin-top: 5px;
+        img {
+            width: 25px;
+            margin-left: 10px;
+        }
+    }
   }
 }
 
