@@ -12,7 +12,7 @@ urlpatterns = [
     path("", homepage, name="home"),
     path("admin/", admin.site.urls),
     path("account/", include("account.urls")),
-    path("invites/", include("kaleo.urls")),
+    path("invites/", include("pinax.invitations.urls")),
 
     path("profile/edit/", ProfileEditView.as_view(), name="profiles_edit"),
     path("u/$", ProfileListView.as_view(), name="profiles_list"),
@@ -20,7 +20,7 @@ urlpatterns = [
     path("u/(?P<username>[\w\._-]+)/$", ProfileDetailView.as_view(), name="profiles_detail"),
     path("t/", include("teams.urls")),
 
-    path("", include("pinax.wiki.urls"))
+    path("wiki/", include("pinax.wiki.urls", namespace="pinax_wiki")),
 ]
 
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
