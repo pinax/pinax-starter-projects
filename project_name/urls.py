@@ -10,7 +10,7 @@ urlpatterns = [
     path("", TemplateView.as_view(template_name="homepage.html"), name="home"),
     path("admin/", admin.site.urls),
     path("account/", include("account.urls")),
-    path("", include("pinax.wiki.urls"))
+    path("wiki/", include("pinax.wiki.urls", namespace="pinax_wiki")),
 ]
 
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
