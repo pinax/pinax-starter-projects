@@ -1,2 +1,2 @@
 Django=={{ django_version }}
-pinax-templates==1.0.4
+pinax-templates==2.0.1
