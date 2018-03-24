@@ -1,4 +1,5 @@
-{% if django_version >= "2" %}from django.urls import path{% else %}from django.conf.urls import url{% endif %}
+{% if django_version < "2" %}from django.conf.urls import url{% endif %}
+{% if django_version >= "2" %}from django.urls import path{% endif %}
 from django.views.generic import TemplateView
 
 
