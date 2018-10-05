@@ -1,7 +1,4 @@
-/* global window document */
-window.jQuery = window.$ = require('jquery');
-
-const $ = window.$;
+import '../scss/site.scss';
 
 require('bootstrap/dist/js/bootstrap.bundle');
 
