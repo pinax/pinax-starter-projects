@@ -9,7 +9,7 @@ const loadStripeElements = () => {
   const key = form.getAttribute('data-stripe-key');
   if (key) {
     if (Stripe === undefined) {
-      throw('pinax-stripe integration requires that https://js.stripe.com/v3/ is loaded in a script tag in your page.');
+      throw Error('pinax-stripe integration requires that https://js.stripe.com/v3/ is loaded in a script tag in your page.');
     }
     const stripe = Stripe(key);
     const elements = stripe.elements();

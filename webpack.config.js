@@ -19,39 +19,39 @@ const styleRule = {
     MiniCssExtractPlugin.loader,
     { loader: 'css-loader', options: { sourceMap: true } },
     { loader: 'postcss-loader', options: { plugins: () => [autoprefixer({ browsers: ['last 2 versions'] })] } },
-    'sass-loader'
-  ]
+    'sass-loader',
+  ],
 };
 
 const jsRule = {
   test: /\.js$/,
   loader: 'babel-loader',
   include: path.resolve('./static/src/js'),
-  exclude: /node_modules/
+  exclude: /node_modules/,
 };
 
 const assetRule = {
   test: /.(jpg|png|woff(2)?|eot|ttf|svg)$/,
-  loader: 'file-loader'
+  loader: 'file-loader',
 };
 
 const plugins = [
   new webpack.ProvidePlugin({
     'window.jQuery': 'jquery',
     jQuery: 'jquery',
-    $: 'jquery'
+    $: 'jquery',
   }),
   new BundleTracker({ filename: './webpack-stats.json' }),
   new MiniCssExtractPlugin({
     filename: devMode ? '[name].css' : '[name].[hash].css',
-    chunkFilename: devMode ? '[id].css' : '[id].[hash].css'
+    chunkFilename: devMode ? '[id].css' : '[id].[hash].css',
   }),
   new BundleAnalyzerPlugin({ analyzerMode: 'static', openAnalyzer: false }),
   new webpack.HotModuleReplacementPlugin(),
   new CleanWebpackPlugin(['./static/dist']),
   new CopyWebpackPlugin([
-    { from: './static/src/images/**/*', to: path.resolve('./static/dist/images/[name].[ext]'), toType: 'template' }
-  ])
+    { from: './static/src/images/**/*', to: path.resolve('./static/dist/images/[name].[ext]'), toType: 'template' },
+  ]),
 ];
 
 if (devMode) {
@@ -59,8 +59,8 @@ if (devMode) {
 } else {
   plugins.push(
     new webpack.EnvironmentPlugin([
-      'NODE_ENV'
-    ])
+      'NODE_ENV',
+    ]),
   );
 }
 
@@ -70,13 +70,13 @@ module.exports = {
   output: {
     path: path.resolve('./static/dist/'),
     filename: '[name]-[hash].js',
-    publicPath: hotReload ? 'http://localhost:8080/' : ''
+    publicPath: hotReload ? 'http://localhost:8080/' : '',
   },
   devtool: devMode ? 'cheap-eval-source-map' : 'source-map',
   devServer: {
     hot: true,
     quiet: false,
-    headers: { 'Access-Control-Allow-Origin': '*' }
+    headers: { 'Access-Control-Allow-Origin': '*' },
   },
   module: { rules: [jsRule, styleRule, assetRule] },
   externals: { jquery: 'jQuery' },
@@ -86,9 +86,9 @@ module.exports = {
       new UglifyJsPlugin({
         cache: true,
         parallel: true,
-        sourceMap: true // set to true if you want JS source maps
+        sourceMap: true, // set to true if you want JS source maps
       }),
-      new OptimizeCSSAssetsPlugin({})
+      new OptimizeCSSAssetsPlugin({}),
     ],
     splitChunks: {
       cacheGroups: {
@@ -97,7 +97,7 @@ module.exports = {
           name: 'vendor',
           chunks: 'initial',
         },
-      }
-    }
+      },
+    },
   },
 };
