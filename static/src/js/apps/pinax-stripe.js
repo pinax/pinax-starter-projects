@@ -1,3 +1,4 @@
+/* global Stripe */
 // Requires <script src="https://js.stripe.com/v3/"></script> to be included in your page
 
 const loadStripeElements = () => {

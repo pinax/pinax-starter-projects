@@ -7,3 +7,8 @@ name = "pypi"
 Django = "*"
 pinax-templates = "*"
 django-webpack-loader = "*"
+
+[dev-packages]
+"flake8" = "*"
+isort = "*"
+"flake8-quotes" = "*"

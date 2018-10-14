@@ -2,13 +2,12 @@ const path = require('path');
 const webpack = require('webpack');
 const autoprefixer = require('autoprefixer');
 
-const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
+const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
 const BundleTracker = require('webpack-bundle-tracker');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
-const SentryCliPlugin = require('@sentry/webpack-plugin');
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 
 const devMode = process.env.NODE_ENV !== 'production';
@@ -39,8 +38,8 @@ const assetRule = {
 const plugins = [
   new webpack.ProvidePlugin({
     'window.jQuery': 'jquery',
-    'jQuery': 'jquery',
-    '$': 'jquery'
+    jQuery: 'jquery',
+    $: 'jquery'
   }),
   new BundleTracker({ filename: './webpack-stats.json' }),
   new MiniCssExtractPlugin({

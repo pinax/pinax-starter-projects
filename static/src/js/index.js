@@ -1,4 +1,5 @@
-import '../scss/site.scss';
+/* global $ */
+import '../scss/index.scss';
 
 require('bootstrap/dist/js/bootstrap.bundle');
 

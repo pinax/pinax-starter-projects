@@ -1,3 +1,4 @@
+/* global $ */
 const hookupCustomFileWidget = () => {
   const $el = $('body.pinax-documents .custom-file').find('input[type=file]');
 //   <label class="custom-file">
