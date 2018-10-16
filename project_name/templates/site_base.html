@@ -2,11 +2,13 @@
 
 {% load staticfiles %}
 {% load pinax_webanalytics_tags %}
+{% load render_bundle from webpack_loader %}
 {% load i18n %}
 
 
 {% block styles %}
-    <link href="{% static "css/app.css" %}" rel="stylesheet" />
+    {% render_bundle "vendor" "css" %}
+    {% render_bundle "main" "css" %}
 {% endblock %}
 
 
@@ -50,7 +52,9 @@
 
 
 {% block scripts %}
-    <script src="{% static "js/site.js" %}"></script>
+    <script src="https://unpkg.com/jquery@3.3.1/dist/jquery.min.js"></script>
+    {% render_bundle "vendor" "js" %}
+    {% render_bundle "main" "js" %}
 {% endblock %}
 
 {% block extra_body_base %}
