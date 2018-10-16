@@ -1,2 +1,0 @@
--r requirements-zero.txt
--r requirements-account.txt
