@@ -1,6 +1,8 @@
+webpack-stats.json
 *.pyc
 node_modules/
 dev.db
 site_media/
 static/dist/
 .DS_Store
+.vscode
