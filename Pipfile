@@ -1,0 +1,18 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+Django = "*"
+pinax-templates = "*"
+django-webpack-loader = "*"
+django-user-accounts = "==2.0.3"
+pinax-eventlog = "==2.0.3"
+pinax-webanalytics = "==4.0.2"
+pinax-documents = "==1.0.2"
+
+[dev-packages]
+"flake8" = "*"
+isort = "*"
+"flake8-quotes" = "*"
