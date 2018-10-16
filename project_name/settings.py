@@ -68,7 +68,7 @@ STATICFILES_DIRS = [
     os.path.join(PROJECT_ROOT, "static", "dist"),
 ]
 
-STATICFILES_STORAGE = "django.contrib.staticfiles.storage.ManifestStaticFilesStorage"
+STATICFILES_STORAGE = "django.contrib.staticfiles.storage.StaticFilesStorage"
 
 # List of finder classes that know how to find static files in
 # various locations.
@@ -128,6 +128,8 @@ INSTALLED_APPS = [
     "django.contrib.sites",
     "django.contrib.staticfiles",
 
+    "webpack_loader",
+
     # templates
     "bootstrapform",
     "pinax.templates",
@@ -145,6 +147,17 @@ INSTALLED_APPS = [
     "{{ project_name }}",
     "{{ project_name }}.profiles",
 ]
+
+WEBPACK_LOADER = {
+    "DEFAULT": {
+        "CACHE": not DEBUG,
+        "BUNDLE_DIR_NAME": "/",
+        "STATS_FILE": os.path.join(PROJECT_ROOT, "webpack-stats.json"),
+        "POLL_INTERVAL": 0.1,
+        "TIMEOUT": None,
+        "IGNORE": [".*\.hot-update.js", ".+\.map"]
+    }
+}
 
 ADMIN_URL = "admin:index"
 CONTACT_EMAIL = "support@example.com"
