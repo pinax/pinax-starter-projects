@@ -1,4 +1,0 @@
-pinax-blog==7.0.1
-Markdown==2.6.11
-Pillow==5.0.0
-pinax-webanalytics==4.0.2
