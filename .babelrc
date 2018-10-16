@@ -1,13 +1,23 @@
 {
   "presets": [
-    ["env", {
-      "targets": {
-        "browsers": ["last 2 versions", "safari >= 7", "ie >= 8"]
+    [
+      "@babel/preset-env",
+      {
+        "targets": {
+          "browsers": [
+            "last 2 versions",
+            "safari >= 7",
+            "ie >= 8"
+          ]
+        }
       }
-    }]
+    ]
   ],
   "ignore": [
     "node_modules/",
     "dist/"
+  ],
+  "plugins": [
+    "@babel/plugin-proposal-object-rest-spread"
   ]
 }
