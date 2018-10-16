@@ -1,3 +1,0 @@
--r requirements-zero.txt
--r requirements-blog.txt
--r requirements-company.txt
