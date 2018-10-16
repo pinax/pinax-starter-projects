@@ -7,10 +7,17 @@ Make sure you are using a virtual environment of some sort (e.g. `virtualenv` or
 
 ```
 npm install
-pip install -r requirements.txt
+pipenv install
+pipenv shell
 ./manage.py migrate
 ./manage.py loaddata sites
-npm run dev
 ```
 
-Browse to http://localhost:3000/
+Then, in two different terminals:
+
+```
+npm start
+./manage.py runserver
+```
+
+Browse to http://localhost:8000/
