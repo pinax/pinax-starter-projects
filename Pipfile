@@ -7,7 +7,7 @@ name = "pypi"
 Django = "*"
 pinax-templates = "*"
 django-webpack-loader = "*"
-django-user-accounts = "==2.0.3"
+django-user-accounts = "*"
 pinax-eventlog = "==2.0.3"
 pinax-webanalytics = "==4.0.2"
 
