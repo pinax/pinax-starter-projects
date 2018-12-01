@@ -8,8 +8,8 @@ Django = "*"
 pinax-templates = "*"
 django-webpack-loader = "*"
 django-user-accounts = "*"
-pinax-eventlog = "==2.0.3"
-pinax-webanalytics = "==4.0.2"
+pinax-eventlog = "*"
+pinax-webanalytics = "*"
 
 [dev-packages]
 "flake8" = "*"
