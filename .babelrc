@@ -5,9 +5,9 @@
       {
         "targets": {
           "browsers": [
+            "> 1%",
             "last 2 versions",
-            "safari >= 7",
-            "ie >= 8"
+            "not ie <= 8"
           ]
         }
       }
