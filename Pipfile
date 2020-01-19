@@ -10,6 +10,7 @@ django-webpack-loader = "*"
 django-user-accounts = "*"
 pinax-eventlog = "*"
 pinax-webanalytics = "*"
+nodeenv = "*"
 
 [dev-packages]
 "flake8" = "*"
