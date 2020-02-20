@@ -18,7 +18,7 @@ const styleRule = {
   use: [
     MiniCssExtractPlugin.loader,
     { loader: 'css-loader', options: { sourceMap: true } },
-    { loader: 'postcss-loader', options: { plugins: () => [autoprefixer({ browsers: ['last 2 versions'] })] } },
+    { loader: 'postcss-loader', options: { plugins: () => [autoprefixer()] } },
     'sass-loader',
   ],
 };
