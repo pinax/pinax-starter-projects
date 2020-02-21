@@ -11,6 +11,7 @@ django-user-accounts = "*"
 pinax-eventlog = "*"
 pinax-webanalytics = "*"
 pinax-wiki = "*"
+nodeenv = "*"
 
 [dev-packages]
 "flake8" = "*"
