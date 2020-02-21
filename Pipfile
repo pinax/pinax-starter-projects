@@ -9,6 +9,7 @@ pinax-templates = "*"
 django-webpack-loader = "*"
 pinax-waitinglist = "==2.0.3"
 pinax-webanalytics = "==4.0.2"
+nodeenv = "*"
 
 [dev-packages]
 "flake8" = "*"
