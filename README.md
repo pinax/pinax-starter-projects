@@ -5,6 +5,16 @@
 Make sure you are using a virtual environment of some sort (e.g. `virtualenv` or
 `pyenv`).
 
+There are packages in use that require PostgresSQL, namely `pinax-eventlog`.
+
+Create your database:
+
+```
+createdb {{ project_name }}
+```
+
+Then run the following:
+
 ```
 pipenv install
 pipenv shell
