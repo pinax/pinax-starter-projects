@@ -5,6 +5,8 @@ name = "pypi"
 
 [packages]
 Django = "*"
+dj-database-url = "*"
+psycopg2-binary = "*"
 pinax-templates = "*"
 django-webpack-loader = "*"
 django-user-accounts = "*"
