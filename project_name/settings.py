@@ -206,6 +206,7 @@ ACCOUNT_USE_AUTH_AUTHENTICATE = True
 AUTHENTICATION_BACKENDS = [
     "social_core.backends.twitter.TwitterOAuth",
     "account.auth_backends.UsernameAuthenticationBackend",
+    "django.contrib.auth.backends.ModelBackend",
 ]
 
 SOCIAL_AUTH_TWITTER_KEY = ""
