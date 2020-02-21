@@ -8,7 +8,9 @@ Make sure you are using a virtual environment of some sort (e.g. `virtualenv` or
 ```
 pipenv install
 pipenv shell
-nodeenv --prebuilt --python-virtualenv --node=10.18.1
+nodeenv --prebuilt --python-virtualenv --node=12.16.1
+exit
+pipenv shell
 npm install
 ./manage.py migrate
 ./manage.py loaddata sites
