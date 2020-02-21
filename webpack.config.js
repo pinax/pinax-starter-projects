@@ -4,11 +4,11 @@ const autoprefixer = require('autoprefixer');
 
 const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
 const BundleTracker = require('webpack-bundle-tracker');
-const CleanWebpackPlugin = require('clean-webpack-plugin');
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
-const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
+const TerserPlugin = require('terser-webpack-plugin');
 
 const devMode = process.env.NODE_ENV !== 'production';
 const hotReload = process.env.HOT_RELOAD === '1';
@@ -48,7 +48,7 @@ const plugins = [
   }),
   new BundleAnalyzerPlugin({ analyzerMode: 'static', openAnalyzer: false }),
   new webpack.HotModuleReplacementPlugin(),
-  new CleanWebpackPlugin(['./static/dist']),
+  new CleanWebpackPlugin(),
   new CopyWebpackPlugin([
     { from: './static/src/images/**/*', to: path.resolve('./static/dist/images/[name].[ext]'), toType: 'template' },
   ]),
@@ -77,27 +77,29 @@ module.exports = {
     hot: true,
     quiet: false,
     headers: { 'Access-Control-Allow-Origin': '*' },
+    https: false,
+    disableHostCheck: true
   },
   module: { rules: [jsRule, styleRule, assetRule] },
   externals: { jquery: 'jQuery' },
   plugins,
   optimization: {
     minimizer: [
-      new UglifyJsPlugin({
+      new TerserPlugin({
         cache: true,
         parallel: true,
-        sourceMap: true, // set to true if you want JS source maps
+        sourceMap: true
       }),
-      new OptimizeCSSAssetsPlugin({}),
+      new OptimizeCSSAssetsPlugin({})
     ],
     splitChunks: {
       cacheGroups: {
         commons: {
           test: /[\\/]node_modules[\\/]/,
           name: 'vendor',
-          chunks: 'initial',
-        },
-      },
-    },
-  },
+          chunks: 'initial'
+        }
+      }
+    }
+  }
 };
