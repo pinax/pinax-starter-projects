@@ -13,7 +13,7 @@ Pillow = "==5.0.0"
 pinax-webanalytics = "==4.0.2"
 pinax-events = "==2.0.3"
 pinax-news = "==2.0.3"
-
+nodeenv = "*"
 
 [dev-packages]
 "flake8" = "*"
