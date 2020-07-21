@@ -1,0 +1,9 @@
+[*]
+indent_style = space
+end_of_line = lf
+insert_final_newline = true
+charset = utf-8
+indent_size = 4
+
+[*.{json,js,vue,html,yml}]
+indent_size = 2
