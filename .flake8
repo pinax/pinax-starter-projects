@@ -1,0 +1,6 @@
+[flake8]
+ignore = E265,E501,C901,W605,E252,W504,W503
+max-line-length = 100
+max-complexity = 10
+exclude = node_modules/,*migrations*,tests.py
+inline-quotes = double
